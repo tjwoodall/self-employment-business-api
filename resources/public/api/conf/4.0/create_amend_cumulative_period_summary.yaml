@@ -42,7 +42,7 @@ security:
 
 requestBody:
   content:
-    applicaton/json:
+    application/json:
       schema:
         $ref: './schemas/createAmendCumulativePeriodSummary/request.json'
       examples:
