@@ -5,14 +5,12 @@
   },
   "periodIncome": {
     "turnover": 1000.99,
-    "other": 1000.09
-    
-    ,"taxTakenOffTradingIncome": 1000.99
-    
+    "other": 1000.09,
+    "taxTakenOffTradingIncome": 1000.99
   },
   "periodExpenses": {
     "costOfGoods": 1000.99,
-    "paymentsToSubcontractors": -000.99,
+    "paymentsToSubcontractors": -1000.99,
     "wagesAndStaffCosts": -1000.99,
     "carVanTravelExpenses": -1000.99,
     "premisesRunningCosts": -99999.99,
