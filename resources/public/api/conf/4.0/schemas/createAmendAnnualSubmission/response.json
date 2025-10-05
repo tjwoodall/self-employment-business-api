@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Create and Amend Self-Employment Annual Submission",
   "description": "Create and Amend Self-Employment Annual Submission",
   "type": "object",

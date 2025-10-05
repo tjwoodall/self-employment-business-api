@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Any tax year",
   "description": "List Self-Employment Period Summaries Response",
   "type": "object",
