@@ -41,23 +41,17 @@ requestBody:
           - $ref: './schemas/createAmendAnnualSubmission/def3/request.json'
       examples:
         "With trading allowance request for TY 2023-24 and before":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def1/with_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def1/with_trading_income_allowance.json'
         "Without trading allowance request for TY 2023-24 and before":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def1/without_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def1/without_trading_income_allowance.json'
         "With trading allowance request for TY 2024-25":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def2/with_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def2/with_trading_income_allowance.json'
         "Without trading allowance request for TY 2024-25":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json'
         "With trading allowance request for TY 2025-26 onwards":
-          "value":
-            "$ref": './examples/createAmendAnnualSubmission/def3/with_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def3/with_trading_income_allowance.json'
         "Without trading allowance request for TY 2025-26 onwards":
-          "value":
-            "$ref": './examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json'
 
 responses:
   "204":

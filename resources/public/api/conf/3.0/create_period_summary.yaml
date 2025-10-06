@@ -54,18 +54,14 @@ requestBody:
           - $ref: './schemas/createPeriodSummary/def2/request.json'
       examples:
         "Without consolidated request for TY 2023-24 onwards":
-          value:
-            $ref: './examples/createPeriodSummary/def2/non_consolidated_request.json'
+          externalValue: './examples/createPeriodSummary/def2/non_consolidated_request.json'
         "With consolidated request for TY 2023-24 onwards":
-          value:
-            $ref: './examples/createPeriodSummary/def2/consolidated_request.json'
+          externalValue: './examples/createPeriodSummary/def2/consolidated_request.json'
         "Without consolidated request for TY 2022-23 and before":
-          value:
-            $ref: './examples/createPeriodSummary/def1/non_consolidated_request.json'
+          externalValue: './examples/createPeriodSummary/def1/non_consolidated_request.json'
         "With consolidated request for TY 2022-23 and before":
           description: Create Period Summary Request
-          value:
-            $ref: './examples/createPeriodSummary/def1/consolidated_request.json'
+          externalValue: './examples/createPeriodSummary/def1/consolidated_request.json'
 
 
 
@@ -88,8 +84,7 @@ responses:
           $ref: './schemas/createPeriodSummary/response.json'
         examples:
           "Example response":
-            value:
-              $ref: './examples/createPeriodSummary/response.json'
+            externalValue: './examples/createPeriodSummary/response.json'
 
   "400":
     description: Bad request

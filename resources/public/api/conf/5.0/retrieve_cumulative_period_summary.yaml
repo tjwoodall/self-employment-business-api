@@ -47,11 +47,9 @@ responses:
           $ref: './schemas/retrieveCumulativePeriodSummary/def1/response.json'
         examples:
           "Non-consolidated response":
-            value:
-              $ref: './examples/retrieveCumulativePeriodSummary/def1/non_consolidated_response.json'
+            externalValue: './examples/retrieveCumulativePeriodSummary/def1/non_consolidated_response.json'
           "Consolidated response":
-            value:
-              $ref: './examples/retrieveCumulativePeriodSummary/def1/consolidated_response.json'
+            externalValue: './examples/retrieveCumulativePeriodSummary/def1/consolidated_response.json'
 
   "400":
     description: Bad request

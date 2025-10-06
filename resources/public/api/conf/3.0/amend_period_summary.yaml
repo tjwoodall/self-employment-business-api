@@ -43,17 +43,13 @@ requestBody:
           - $ref: './schemas/amendPeriodSummary/def2/request.json'
       examples:
         "Non-consolidated request for TY 2023-24 onwards":
-          value:
-            $ref: './examples/amendPeriodSummary/def2/non_consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def2/non_consolidated_request.json'
         "Consolidated request for TY 2023-24 onwards":
-          value:
-            $ref: './examples/amendPeriodSummary/def2/consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def2/consolidated_request.json'
         "Non-consolidated request for TY 2022-23 and before":
-          value:
-            $ref: './examples/amendPeriodSummary/def1/non_consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def1/non_consolidated_request.json'
         "Consolidated request for TY 2022-23 and before":
-          value:
-            $ref: './examples/amendPeriodSummary/def1/consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def1/consolidated_request.json'
 
 
 responses:
@@ -74,8 +70,7 @@ responses:
           $ref: './schemas/amendPeriodSummary/response.json'
         examples:
           "Example response":
-            value:
-              $ref: './examples/amendPeriodSummary/response.json'
+            externalValue: './examples/amendPeriodSummary/response.json'
 
   "400":
     description: Bad request
