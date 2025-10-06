@@ -47,11 +47,9 @@ requestBody:
         $ref: './schemas/createAmendCumulativePeriodSummary/request.json'
       examples:
         "Non-consolidated request":
-          value:
-            $ref: './examples/createAmendCumulativePeriodSummary/non_consolidated_request.json'
+          externalValue: './examples/createAmendCumulativePeriodSummary/non_consolidated_request.json'
         "Consolidated request":
-          value:
-            $ref: './examples/createAmendCumulativePeriodSummary/consolidated_request.json'
+          externalValue: './examples/createAmendCumulativePeriodSummary/consolidated_request.json'
 
 responses:
   "200":
