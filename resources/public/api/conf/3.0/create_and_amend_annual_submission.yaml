@@ -39,17 +39,13 @@ requestBody:
           - $ref: './schemas/createAmendAnnualSubmission/def2/request.json'
       examples:
         "With trading allowance request for TY 2023-24 and before":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def1/with_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def1/with_trading_income_allowance.json'
         "Without trading allowance request for TY 2023-24 and before":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def1/without_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def1/without_trading_income_allowance.json'
         "With trading allowance request for TY 2024-25 onwards":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def2/with_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def2/with_trading_income_allowance.json'
         "Without trading allowance request for TY 2024-25 onwards":
-          value:
-            $ref: './examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json'
 
 responses:
   "200":
@@ -69,8 +65,7 @@ responses:
           $ref: './schemas/createAmendAnnualSubmission/response.json'
         examples:
           "Example response":
-            value:
-              $ref: './examples/createAmendAnnualSubmission/response.json'
+            externalValue: './examples/createAmendAnnualSubmission/response.json'
 
   "400":
     description: Bad request
