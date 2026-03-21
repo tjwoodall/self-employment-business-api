@@ -46,17 +46,13 @@ requestBody:
           - $ref: './schemas/amendPeriodSummary/def2/request.json'
       examples:
         "Non-consolidated request for TY 2023-24 and 2024-25":
-          value:
-            $ref: './examples/amendPeriodSummary/def2/non_consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def2/non_consolidated_request.json'
         "Consolidated request for TY 2023-24 and 2024-25":
-          value:
-            $ref: './examples/amendPeriodSummary/def2/consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def2/consolidated_request.json'
         "Non-consolidated request for TY 2022-23 and before":
-          value:
-            $ref: './examples/amendPeriodSummary/def1/non_consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def1/non_consolidated_request.json'
         "Consolidated request for TY 2022-23 and before":
-          value:
-            $ref: './examples/amendPeriodSummary/def1/consolidated_request.json'
+          externalValue: './examples/amendPeriodSummary/def1/consolidated_request.json'
 
 responses:
   "204":
