@@ -47,10 +47,10 @@ tags:
 paths:
   /individuals/business/self-employment/{nino}/{businessId}/annual/{taxYear}:
     put:
-      summary: Create and Amend Self-Employment Annual Submission
       security:
         - User-Restricted:
             - write:self-assessment
+      summary: Create and Amend Self-Employment Annual Submission
       description: |
         This endpoint allows a developer to create or amend a self-employment annual summary for a tax year.
         A National Insurance number, Business ID and tax year must be provided.
@@ -804,184 +804,22 @@ paths:
             examples:
               With trading allowance request for TY 2023-24 and before:
                 value:
-                  adjustments:
-                    includedNonTaxableProfits: 200.12
-                    basisAdjustment: 200.12
-                    overlapReliefUsed: 200.12
-                    accountingAdjustment: 200.12
-                    averagingAdjustment: -200.12
-                    outstandingBusinessIncome: 200.12
-                    balancingChargeBpra: 200.12
-                    balancingChargeOther: 200.12
-                    goodsAndServicesOwnUse: 200.12
-                  allowances:
-                    tradingIncomeAllowance: 1000
-                  nonFinancials:
-                    businessDetailsChangedRecently: true
-                    class4NicsExemptionReason: non-resident
+                  $ref: ./examples/createAmendAnnualSubmission/def1/with_trading_income_allowance.json
               Without trading allowance request for TY 2023-24 and before:
                 value:
-                  adjustments:
-                    includedNonTaxableProfits: 200.12
-                    basisAdjustment: 200.12
-                    overlapReliefUsed: 200.12
-                    accountingAdjustment: 200.12
-                    averagingAdjustment: -200.12
-                    outstandingBusinessIncome: 200.12
-                    balancingChargeBpra: 200.12
-                    balancingChargeOther: 200.12
-                    goodsAndServicesOwnUse: 200.12
-                  allowances:
-                    annualInvestmentAllowance: 200.12
-                    capitalAllowanceMainPool: 200.12
-                    capitalAllowanceSpecialRatePool: 200.12
-                    zeroEmissionsGoodsVehicleAllowance: 200.12
-                    businessPremisesRenovationAllowance: 200.12
-                    enhancedCapitalAllowance: 200.12
-                    allowanceOnSales: 200.12
-                    capitalAllowanceSingleAssetPool: 200.12
-                    electricChargePointAllowance: 200.12
-                    zeroEmissionsCarAllowance: 200.12
-                    structuredBuildingAllowance:
-                      - amount: 1.23
-                        firstYear:
-                          qualifyingDate: '2021-11-11'
-                          qualifyingAmountExpenditure: 1.23
-                        building:
-                          name: Plaza 2
-                          postcode: TF3 4NT
-                    enhancedStructuredBuildingAllowance:
-                      - amount: 1.23
-                        firstYear:
-                          qualifyingDate: '2021-11-11'
-                          qualifyingAmountExpenditure: 1.23
-                        building:
-                          name: Plaza 2
-                          postcode: TF3 4NT
-                  nonFinancials:
-                    businessDetailsChangedRecently: true
+                  $ref: ./examples/createAmendAnnualSubmission/def1/without_trading_income_allowance.json
               With trading allowance request for TY 2024-25:
                 value:
-                  adjustments:
-                    includedNonTaxableProfits: 200.12
-                    basisAdjustment: 200.12
-                    overlapReliefUsed: 200.12
-                    accountingAdjustment: 200.12
-                    averagingAdjustment: -200.12
-                    outstandingBusinessIncome: 200.12
-                    balancingChargeBpra: 200.12
-                    balancingChargeOther: 200.12
-                    goodsAndServicesOwnUse: 200.12
-                    transitionProfitAmount: 200.12
-                    transitionProfitAccelerationAmount: 200.12
-                  allowances:
-                    tradingIncomeAllowance: 1000
-                  nonFinancials:
-                    businessDetailsChangedRecently: true
-                    class4NicsExemptionReason: non-resident
+                  $ref: ./examples/createAmendAnnualSubmission/def2/with_trading_income_allowance.json
               Without trading allowance request for TY 2024-25:
                 value:
-                  adjustments:
-                    includedNonTaxableProfits: 200.12
-                    basisAdjustment: 200.12
-                    overlapReliefUsed: 200.12
-                    accountingAdjustment: 200.12
-                    averagingAdjustment: -200.12
-                    outstandingBusinessIncome: 200.12
-                    balancingChargeBpra: 200.12
-                    balancingChargeOther: 200.12
-                    goodsAndServicesOwnUse: 200.12
-                    transitionProfitAmount: 200.12
-                    transitionProfitAccelerationAmount: 200.12
-                  allowances:
-                    annualInvestmentAllowance: 200.12
-                    capitalAllowanceMainPool: 200.12
-                    capitalAllowanceSpecialRatePool: 200.12
-                    zeroEmissionsGoodsVehicleAllowance: 200.12
-                    businessPremisesRenovationAllowance: 200.12
-                    enhancedCapitalAllowance: 200.12
-                    allowanceOnSales: 200.12
-                    capitalAllowanceSingleAssetPool: 200.12
-                    electricChargePointAllowance: 200.12
-                    zeroEmissionsCarAllowance: 200.12
-                    structuredBuildingAllowance:
-                      - amount: 1.23
-                        firstYear:
-                          qualifyingDate: '2021-11-11'
-                          qualifyingAmountExpenditure: 1.23
-                        building:
-                          name: Plaza 2
-                          postcode: TF3 4NT
-                    enhancedStructuredBuildingAllowance:
-                      - amount: 1.23
-                        firstYear:
-                          qualifyingDate: '2021-11-11'
-                          qualifyingAmountExpenditure: 1.23
-                        building:
-                          name: Plaza 2
-                          postcode: TF3 4NT
-                  nonFinancials:
-                    businessDetailsChangedRecently: true
+                  $ref: ./examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json
               With trading allowance request for TY 2025-26 onwards:
                 value:
-                  adjustments:
-                    includedNonTaxableProfits: 200.12
-                    basisAdjustment: 200.12
-                    overlapReliefUsed: 200.12
-                    accountingAdjustment: 200.12
-                    averagingAdjustment: -200.12
-                    outstandingBusinessIncome: 200.12
-                    balancingChargeBpra: 200.12
-                    balancingChargeOther: 200.12
-                    goodsAndServicesOwnUse: 200.12
-                    transitionProfitAmount: 200.12
-                    transitionProfitAccelerationAmount: 200.12
-                  allowances:
-                    tradingIncomeAllowance: 1000
-                  nonFinancials:
-                    businessDetailsChangedRecently: true
-                    class4NicsExemptionReason: non-resident
+                  $ref: ./examples/createAmendAnnualSubmission/def3/with_trading_income_allowance.json
               Without trading allowance request for TY 2025-26 onwards:
                 value:
-                  adjustments:
-                    includedNonTaxableProfits: 200.12
-                    basisAdjustment: 200.12
-                    overlapReliefUsed: 200.12
-                    accountingAdjustment: 200.12
-                    averagingAdjustment: -200.12
-                    outstandingBusinessIncome: 200.12
-                    balancingChargeBpra: 200.12
-                    balancingChargeOther: 200.12
-                    goodsAndServicesOwnUse: 200.12
-                    transitionProfitAmount: 200.12
-                    transitionProfitAccelerationAmount: 200.12
-                  allowances:
-                    annualInvestmentAllowance: 200.12
-                    capitalAllowanceMainPool: 200.12
-                    capitalAllowanceSpecialRatePool: 200.12
-                    businessPremisesRenovationAllowance: 200.12
-                    enhancedCapitalAllowance: 200.12
-                    allowanceOnSales: 200.12
-                    capitalAllowanceSingleAssetPool: 200.12
-                    zeroEmissionsCarAllowance: 200.12
-                    structuredBuildingAllowance:
-                      - amount: 1.23
-                        firstYear:
-                          qualifyingDate: '2021-11-11'
-                          qualifyingAmountExpenditure: 1.23
-                        building:
-                          name: Plaza 2
-                          postcode: TF3 4NT
-                    enhancedStructuredBuildingAllowance:
-                      - amount: 1.23
-                        firstYear:
-                          qualifyingDate: '2021-11-11'
-                          qualifyingAmountExpenditure: 1.23
-                        building:
-                          name: Plaza 2
-                          postcode: TF3 4NT
-                  nonFinancials:
-                    businessDetailsChangedRecently: true
+                  $ref: ./examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json
       responses:
         '204':
           description: Success (No Content)
@@ -1246,10 +1084,10 @@ paths:
                     code: MATCHING_RESOURCE_NOT_FOUND
                     message: Matching resource not found
     get:
-      summary: Retrieve a Self-Employment Annual Submission
       security:
         - User-Restricted:
             - read:self-assessment
+      summary: Retrieve a Self-Employment Annual Submission
       description: |
         This endpoint allows a developer to retrieve a self-employment annual submission for a tax year.
         A National Insurance number, Business ID and tax year must be provided.
@@ -2065,213 +1903,22 @@ paths:
               examples:
                 With allowances response for TY 2023-24 and before:
                   value:
-                    adjustments:
-                      includedNonTaxableProfits: 210
-                      basisAdjustment: 178.23
-                      overlapReliefUsed: 123.78
-                      accountingAdjustment: 678.9
-                      averagingAdjustment: 674.98
-                      outstandingBusinessIncome: 342.67
-                      balancingChargeBpra: 145.98
-                      balancingChargeOther: 457.23
-                      goodsAndServicesOwnUse: 432.9
-                    allowances:
-                      annualInvestmentAllowance: 564.76
-                      capitalAllowanceMainPool: 456.98
-                      capitalAllowanceSpecialRatePool: 352.87
-                      zeroEmissionsGoodsVehicleAllowance: 653.9
-                      businessPremisesRenovationAllowance: 452.98
-                      enhancedCapitalAllowance: 563.23
-                      allowanceOnSales: 678.9
-                      capitalAllowanceSingleAssetPool: 563.89
-                      electricChargePointAllowance: 0
-                      structuredBuildingAllowance:
-                        - amount: 564.89
-                          firstYear:
-                            qualifyingDate: '2019-05-29'
-                            qualifyingAmountExpenditure: 567.67
-                          building:
-                            name: Victoria Building
-                            number: '23'
-                            postcode: TF3 5GH
-                      enhancedStructuredBuildingAllowance:
-                        - amount: 445.56
-                          firstYear:
-                            qualifyingDate: '2019-09-29'
-                            qualifyingAmountExpenditure: 565.56
-                          building:
-                            name: Trinity House
-                            number: '20'
-                            postcode: TF4 7HJ
-                      zeroEmissionsCarAllowance: 678.78
-                    nonFinancials:
-                      businessDetailsChangedRecently: true
-                      class4NicsExemptionReason: non-resident
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/annual/2019-20
-                        rel: create-and-amend-self-employment-annual-submission
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/annual/2019-20
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/annual/2019-20
-                        rel: delete-self-employment-annual-submission
-                        method: DELETE
+                    $ref: ./examples/retrieveAnnualSubmission/def1/full_response.json
                 With trading allowances response for TY 2023-24 and before:
                   value:
-                    adjustments:
-                      includedNonTaxableProfits: 210
-                      basisAdjustment: 178.23
-                      overlapReliefUsed: 123.78
-                      accountingAdjustment: 678.9
-                      averagingAdjustment: 674.98
-                      outstandingBusinessIncome: 342.67
-                      balancingChargeBpra: 145.98
-                      balancingChargeOther: 457.23
-                      goodsAndServicesOwnUse: 432.9
-                    allowances:
-                      tradingIncomeAllowance: 572.99
-                    nonFinancials:
-                      businessDetailsChangedRecently: true
-                      class4NicsExemptionReason: non-resident
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/annual/2019-20
-                        rel: create-and-amend-self-employment-annual-submission
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/annual/2019-20
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/annual/2019-20
-                        rel: delete-self-employment-annual-submission
-                        method: DELETE
+                    $ref: ./examples/retrieveAnnualSubmission/def1/trading_allowance_response.json
                 With allowances response for TY 2024-25:
                   value:
-                    adjustments:
-                      includedNonTaxableProfits: 210
-                      basisAdjustment: 178.23
-                      overlapReliefUsed: 123.78
-                      accountingAdjustment: 678.9
-                      averagingAdjustment: 674.98
-                      outstandingBusinessIncome: 342.67
-                      balancingChargeBpra: 145.98
-                      balancingChargeOther: 457.23
-                      goodsAndServicesOwnUse: 432.9
-                      transitionProfitAmount: 435.9
-                      transitionProfitAccelerationAmount: 439.9
-                    allowances:
-                      annualInvestmentAllowance: 564.76
-                      capitalAllowanceMainPool: 456.98
-                      capitalAllowanceSpecialRatePool: 352.87
-                      zeroEmissionsGoodsVehicleAllowance: 653.9
-                      businessPremisesRenovationAllowance: 452.98
-                      enhancedCapitalAllowance: 563.23
-                      allowanceOnSales: 678.9
-                      capitalAllowanceSingleAssetPool: 563.89
-                      electricChargePointAllowance: 0
-                      structuredBuildingAllowance:
-                        - amount: 564.89
-                          firstYear:
-                            qualifyingDate: '2019-05-29'
-                            qualifyingAmountExpenditure: 567.67
-                          building:
-                            name: Victoria Building
-                            number: '23'
-                            postcode: TF3 5GH
-                      enhancedStructuredBuildingAllowance:
-                        - amount: 445.56
-                          firstYear:
-                            qualifyingDate: '2019-09-29'
-                            qualifyingAmountExpenditure: 565.56
-                          building:
-                            name: Trinity House
-                            number: '20'
-                            postcode: TF4 7HJ
-                      zeroEmissionsCarAllowance: 678.78
-                    nonFinancials:
-                      businessDetailsChangedRecently: true
-                      class4NicsExemptionReason: non-resident
+                    $ref: ./examples/retrieveAnnualSubmission/def2/full_response.json
                 With trading allowances response for TY 2024-25:
                   value:
-                    adjustments:
-                      includedNonTaxableProfits: 210
-                      basisAdjustment: 178.23
-                      overlapReliefUsed: 123.78
-                      accountingAdjustment: 678.9
-                      averagingAdjustment: 674.98
-                      outstandingBusinessIncome: 342.67
-                      balancingChargeBpra: 145.98
-                      balancingChargeOther: 457.23
-                      goodsAndServicesOwnUse: 432.9
-                      transitionProfitAmount: 435.9
-                      transitionProfitAccelerationAmount: 439.9
-                    allowances:
-                      tradingIncomeAllowance: 572.99
-                    nonFinancials:
-                      businessDetailsChangedRecently: true
-                      class4NicsExemptionReason: non-resident
+                    $ref: ./examples/retrieveAnnualSubmission/def2/trading_allowance_response.json
                 With allowances response for TY 2025-26 onwards:
                   value:
-                    adjustments:
-                      includedNonTaxableProfits: 210
-                      basisAdjustment: 178.23
-                      overlapReliefUsed: 123.78
-                      accountingAdjustment: 678.9
-                      averagingAdjustment: 674.98
-                      outstandingBusinessIncome: 342.67
-                      balancingChargeBpra: 145.98
-                      balancingChargeOther: 457.23
-                      goodsAndServicesOwnUse: 432.9
-                      transitionProfitAmount: 435.9
-                      transitionProfitAccelerationAmount: 439.9
-                    allowances:
-                      annualInvestmentAllowance: 564.76
-                      capitalAllowanceMainPool: 456.98
-                      capitalAllowanceSpecialRatePool: 352.87
-                      businessPremisesRenovationAllowance: 452.98
-                      enhancedCapitalAllowance: 563.23
-                      allowanceOnSales: 678.9
-                      capitalAllowanceSingleAssetPool: 563.89
-                      structuredBuildingAllowance:
-                        - amount: 564.89
-                          firstYear:
-                            qualifyingDate: '2019-05-29'
-                            qualifyingAmountExpenditure: 567.67
-                          building:
-                            name: Victoria Building
-                            number: '23'
-                            postcode: TF3 5GH
-                      enhancedStructuredBuildingAllowance:
-                        - amount: 445.56
-                          firstYear:
-                            qualifyingDate: '2019-09-29'
-                            qualifyingAmountExpenditure: 565.56
-                          building:
-                            name: Trinity House
-                            number: '20'
-                            postcode: TF4 7HJ
-                      zeroEmissionsCarAllowance: 678.78
-                    nonFinancials:
-                      businessDetailsChangedRecently: true
-                      class4NicsExemptionReason: non-resident
+                    $ref: ./examples/retrieveAnnualSubmission/def3/full_response.json
                 With trading allowances response for TY 2025-26 onwards:
                   value:
-                    adjustments:
-                      includedNonTaxableProfits: 210
-                      basisAdjustment: 178.23
-                      overlapReliefUsed: 123.78
-                      accountingAdjustment: 678.9
-                      averagingAdjustment: 674.98
-                      outstandingBusinessIncome: 342.67
-                      balancingChargeBpra: 145.98
-                      balancingChargeOther: 457.23
-                      goodsAndServicesOwnUse: 432.9
-                      transitionProfitAmount: 435.9
-                      transitionProfitAccelerationAmount: 439.9
-                    allowances:
-                      tradingIncomeAllowance: 572.99
-                    nonFinancials:
-                      businessDetailsChangedRecently: true
-                      class4NicsExemptionReason: non-resident
+                    $ref: ./examples/retrieveAnnualSubmission/def3/trading_allowance_response.json
         '400':
           description: Bad request
           headers:
@@ -2422,10 +2069,10 @@ paths:
                     The supplied income source could not be found.
                   value: *ref_18
     delete:
-      summary: Delete a Self-Employment Annual Submission
       security:
         - User-Restricted:
             - write:self-assessment
+      summary: Delete a Self-Employment Annual Submission
       description: |
         This endpoint allows a developer to delete the self-employment annual submission for a tax year.
         A National Insurance number, Business ID and tax year must be provided.
@@ -2947,14 +2594,23 @@ paths:
                         turnover:
                           description: The takings, fees, sales or money earned by the business. Income associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
                           example: '10000.00'
                         other:
                           type: number
                           description: Any other business income not included in turnover. Income associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
                           example: '10000.00'
                         taxTakenOffTradingIncome:
                           type: number
                           description: Other tax taken off trading income apart from CIS deductions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
                           example: '10000.00'
                       additionalProperties: false
                     periodExpenses:
@@ -2965,66 +2621,114 @@ paths:
                         consolidatedExpenses:
                           type: number
                           description: The sum of all allowable expenses for the specified period. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.00'
                         costOfGoods:
                           type: number
                           description: Cost of goods bought for resale or goods used. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.00'
                         paymentsToSubcontractors:
                           type: number
                           description: Payments to construction industry subcontractors. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.00'
                         wagesAndStaffCosts:
                           type: number
                           description: Wages, salaries and other staff costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.00'
                         carVanTravelExpenses:
                           type: number
                           description: Car, van and travel expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         premisesRunningCosts:
                           type: number
                           description: Rent, rates, power and insurance costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         maintenanceCosts:
                           type: number
                           description: Repairs and renewals of property and equipment. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         adminCosts:
                           type: number
                           description: Phone, fax, stationery and other office costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         businessEntertainmentCosts:
                           type: number
                           description: Business entertainment costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         advertisingCosts:
                           type: number
                           description: Advertising costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         interestOnBankOtherLoans:
                           type: number
                           description: Interest on bank and other loans. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         financeCharges:
                           type: number
                           description: Bank, credit card and other financial charges. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         irrecoverableDebts:
                           type: number
                           description: Irrecoverable debts written off. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         professionalFees:
                           type: number
                           description: Accountancy, legal and other professional fees. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         depreciation:
                           type: number
                           description: Depreciation and loss/profit on sales of assets. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         otherExpenses:
                           type: number
                           description: Other business expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                       additionalProperties: false
                     periodDisallowableExpenses:
@@ -3035,62 +2739,107 @@ paths:
                         costOfGoodsDisallowable:
                           type: number
                           description: Cost of goods bought for resale or goods used. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.45'
                         paymentsToSubcontractorsDisallowable:
                           type: number
                           description: Payments to subcontractors - Construction Industry Scheme (CIS). Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         wagesAndStaffCostsDisallowable:
                           type: number
                           description: Wages, salaries and other staff costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         carVanTravelExpensesDisallowable:
                           type: number
                           description: Car, van and travel expenses. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         premisesRunningCostsDisallowable:
                           type: number
                           description: Rent, rates, power and insurance costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         maintenanceCostsDisallowable:
                           type: number
                           description: Repairs and renewals of property and equipment. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         adminCostsDisallowable:
                           type: number
                           description: Phone, fax, stationery and other office costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         businessEntertainmentCostsDisallowable:
                           type: number
                           description: Business entertainment costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         advertisingCostsDisallowable:
                           type: number
                           description: Advertising costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         interestOnBankOtherLoansDisallowable:
                           type: number
                           description: Interest on bank and other loans. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         financeChargesDisallowable:
                           type: number
                           description: Bank, credit card and other financial charges. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         irrecoverableDebtsDisallowable:
                           type: number
                           description: Irrecoverable debts written off. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         professionalFeesDisallowable:
                           type: number
                           description: Legal and other professional fees. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         depreciationDisallowable:
                           type: number
                           description: Depreciation and loss/profit on sales of assets. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                         otherExpensesDisallowable:
                           type: number
                           description: Other business expenses. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
                           example: '10000.89'
                       additionalProperties: false
                   additionalProperties: false
@@ -3099,106 +2848,16 @@ paths:
             examples:
               Non-consolidated request for TY 2023-24 and 2024-25:
                 value:
-                  periodDates:
-                    periodStartDate: '2019-07-06'
-                    periodEndDate: '2019-10-05'
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.09
-                    taxTakenOffTradingIncome: 1000.99
-                  periodExpenses:
-                    costOfGoods: 1000.99
-                    paymentsToSubcontractors: -0.99
-                    wagesAndStaffCosts: -1000.99
-                    carVanTravelExpenses: -1000.99
-                    premisesRunningCosts: -99999.99
-                    maintenanceCosts: -1000.99
-                    adminCosts: -1000.99
-                    businessEntertainmentCosts: -1000.99
-                    advertisingCosts: -1000.99
-                    interestOnBankOtherLoans: -1000.99
-                    financeCharges: -1000.99
-                    irrecoverableDebts: -1000.99
-                    professionalFees: -99999999999.99
-                    depreciation: -1000.99
-                    otherExpenses: -1000.99
-                  periodDisallowableExpenses:
-                    costOfGoodsDisallowable: 91000.99
-                    paymentsToSubcontractorsDisallowable: -1000.99
-                    wagesAndStaffCostsDisallowable: -1000.99
-                    carVanTravelExpensesDisallowable: -1000.99
-                    premisesRunningCostsDisallowable: -1000.99
-                    maintenanceCostsDisallowable: -999.99
-                    adminCostsDisallowable: -1000.99
-                    businessEntertainmentCostsDisallowable: -1000.99
-                    advertisingCostsDisallowable: -1000.99
-                    interestOnBankOtherLoansDisallowable: -1000.99
-                    financeChargesDisallowable: -9999.99
-                    irrecoverableDebtsDisallowable: 1000.99
-                    professionalFeesDisallowable: 1000.99
-                    depreciationDisallowable: -99999999999.99
-                    otherExpensesDisallowable: -1000.99
+                  $ref: ./examples/createPeriodSummary/def2/non_consolidated_request.json
               Consolidated request for TY 2023-24 and 2024-25:
                 value:
-                  periodDates:
-                    periodStartDate: '2019-07-06'
-                    periodEndDate: '2019-10-05'
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.09
-                    taxTakenOffTradingIncome: 1000.99
-                  periodExpenses:
-                    consolidatedExpenses: -99999999999.99
+                  $ref: ./examples/createPeriodSummary/def2/consolidated_request.json
               Non-consolidated request for TY 2022-23 and before:
                 value:
-                  periodDates:
-                    periodStartDate: '2019-04-06'
-                    periodEndDate: '2019-07-05'
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.09
-                  periodExpenses:
-                    costOfGoods: 1000.99
-                    paymentsToSubcontractors: 1000.99
-                    wagesAndStaffCosts: 1000.99
-                    carVanTravelExpenses: 1000.99
-                    premisesRunningCosts: -99999.99
-                    maintenanceCosts: -1000.99
-                    adminCosts: 1000.99
-                    businessEntertainmentCosts: 1000.99
-                    advertisingCosts: 1000.99
-                    interestOnBankOtherLoans: -1000.99
-                    financeCharges: -1000.99
-                    irrecoverableDebts: -1000.99
-                    professionalFees: -99999999999.99
-                    depreciation: -1000.99
-                    otherExpenses: 1000.99
-                  periodDisallowableExpenses:
-                    costOfGoodsDisallowable: 91000.99
-                    paymentsToSubcontractorsDisallowable: 1000.99
-                    wagesAndStaffCostsDisallowable: 1000.99
-                    carVanTravelExpensesDisallowable: 1000.99
-                    premisesRunningCostsDisallowable: -1000.99
-                    maintenanceCostsDisallowable: -999.99
-                    adminCostsDisallowable: 1000.99
-                    businessEntertainmentCostsDisallowable: 1000.99
-                    advertisingCostsDisallowable: 1000.99
-                    interestOnBankOtherLoansDisallowable: -1000.99
-                    financeChargesDisallowable: -9999.99
-                    irrecoverableDebtsDisallowable: 1000.99
-                    professionalFeesDisallowable: 1000.99
-                    depreciationDisallowable: -99999999999.99
-                    otherExpensesDisallowable: 1000.99
+                  $ref: ./examples/createPeriodSummary/def1/non_consolidated_request.json
               Consolidated request for TY 2022-23 and before:
                 value:
-                  periodDates:
-                    periodStartDate: '2019-04-06'
-                    periodEndDate: '2019-07-05'
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.09
-                  periodExpenses:
-                    consolidatedExpenses: 99999999999.99
+                  $ref: ./examples/createPeriodSummary/def1/consolidated_request.json
       responses:
         '200':
           description: Success
@@ -3250,17 +2909,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    periodId: 2019-07-05_2020-10-05
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: amend-self-employment-period-summary
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910}/period/2019-06-12_2020-06-12
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period
-                        rel: list-self-employment-period-summaries
-                        method: GET
+                    $ref: ./examples/createPeriodSummary/response.json
         '400':
           description: Bad request
           headers:
@@ -3591,13 +3240,7 @@ paths:
               examples:
                 Example response:
                   value:
-                    periods:
-                      - periodId: 2017-07-06_2017-10-05
-                        periodStartDate: '2017-07-06'
-                        periodEndDate: '2017-10-05'
-                      - periodId: 2017-10-06_2018-01-05
-                        periodStartDate: '2017-10-06'
-                        periodEndDate: '2018-01-05'
+                    $ref: ./examples/listPeriodSummaries/response.json
         '400':
           description: Bad request
           headers:
@@ -3756,10 +3399,10 @@ paths:
                   value: *ref_18
   /individuals/business/self-employment/{nino}/{businessId}/period/{taxYear}/{periodId}:
     put:
-      summary: Amend a Self-Employment Period Summary
       security:
         - User-Restricted:
             - write:self-assessment
+      summary: Amend a Self-Employment Period Summary
       description: |
         This endpoint enables you to amend a self-employment period summary.
         Submissions must include values for incomes, expenses and deductions, even if the values are zero.
@@ -3889,94 +3532,16 @@ paths:
             examples:
               Non-consolidated request for TY 2023-24 and 2024-25:
                 value:
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.99
-                    taxTakenOffTradingIncome: 1000.99
-                  periodExpenses:
-                    costOfGoods: 1000.99
-                    paymentsToSubcontractors: -1000.99
-                    wagesAndStaffCosts: -1000.99
-                    carVanTravelExpenses: -1000.99
-                    premisesRunningCosts: 1000.99
-                    maintenanceCosts: 1000.99
-                    adminCosts: -1000.99
-                    businessEntertainmentCosts: -1000.99
-                    advertisingCosts: -1000.99
-                    interestOnBankOtherLoans: 1000.99
-                    financeCharges: 1000.99
-                    irrecoverableDebts: 1000.99
-                    professionalFees: 1000.99
-                    depreciation: 1000.99
-                    otherExpenses: 1000.99
-                  periodDisallowableExpenses:
-                    costOfGoodsDisallowable: -1000.99
-                    paymentsToSubcontractorsDisallowable: -1000.99
-                    wagesAndStaffCostsDisallowable: -1000.99
-                    carVanTravelExpensesDisallowable: -1000.99
-                    premisesRunningCostsDisallowable: 1000.99
-                    maintenanceCostsDisallowable: 1000.99
-                    adminCostsDisallowable: -1000.99
-                    businessEntertainmentCostsDisallowable: -1000.99
-                    advertisingCostsDisallowable: -1000.99
-                    interestOnBankOtherLoansDisallowable: 1000.99
-                    financeChargesDisallowable: 1000.99
-                    irrecoverableDebtsDisallowable: 1000.99
-                    professionalFeesDisallowable: 1000.99
-                    depreciationDisallowable: 1000.99
-                    otherExpensesDisallowable: -1000.99
+                  $ref: ./examples/amendPeriodSummary/def2/non_consolidated_request.json
               Consolidated request for TY 2023-24 and 2024-25:
                 value:
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.99
-                    taxTakenOffTradingIncome: 1000.99
-                  periodExpenses:
-                    consolidatedExpenses: -1000.99
+                  $ref: ./examples/amendPeriodSummary/def2/consolidated_request.json
               Non-consolidated request for TY 2022-23 and before:
                 value:
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.99
-                  periodExpenses:
-                    costOfGoods: 1000.99
-                    paymentsToSubcontractors: 1000.99
-                    wagesAndStaffCosts: 1000.99
-                    carVanTravelExpenses: 1000.99
-                    premisesRunningCosts: 1000.99
-                    maintenanceCosts: 1000.99
-                    adminCosts: 1000.99
-                    businessEntertainmentCosts: 1000.99
-                    advertisingCosts: 1000.99
-                    interestOnBankOtherLoans: 1000.99
-                    financeCharges: 1000.99
-                    irrecoverableDebts: 1000.99
-                    professionalFees: 1000.99
-                    depreciation: 1000.99
-                    otherExpenses: 1000.99
-                  periodDisallowableExpenses:
-                    costOfGoodsDisallowable: 1000.99
-                    paymentsToSubcontractorsDisallowable: 1000.99
-                    wagesAndStaffCostsDisallowable: 1000.99
-                    carVanTravelExpensesDisallowable: 1000.99
-                    premisesRunningCostsDisallowable: 1000.99
-                    maintenanceCostsDisallowable: 1000.99
-                    adminCostsDisallowable: 1000.99
-                    businessEntertainmentCostsDisallowable: 1000.99
-                    advertisingCostsDisallowable: 1000.99
-                    interestOnBankOtherLoansDisallowable: 1000.99
-                    financeChargesDisallowable: 1000.99
-                    irrecoverableDebtsDisallowable: 1000.99
-                    professionalFeesDisallowable: 1000.99
-                    depreciationDisallowable: 1000.99
-                    otherExpensesDisallowable: 1000.99
+                  $ref: ./examples/amendPeriodSummary/def1/non_consolidated_request.json
               Consolidated request for TY 2022-23 and before:
                 value:
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.99
-                  periodExpenses:
-                    consolidatedExpenses: 1000.99
+                  $ref: ./examples/amendPeriodSummary/def1/consolidated_request.json
       responses:
         '204':
           description: Success (No Content)
@@ -4182,10 +3747,10 @@ paths:
                     The supplied income source could not be found.
                   value: *ref_18
     get:
-      summary: Retrieve a Self-Employment Period Summary
       security:
         - User-Restricted:
             - read:self-assessment
+      summary: Retrieve a Self-Employment Period Summary
       description: |
         This endpoint enables you to retrieve a single self-employment period summary for a given identifier.
         A National Insurance number, business ID and period ID must be provided.
@@ -4355,146 +3920,16 @@ paths:
               examples:
                 Non-consolidated response for TY 2023-24 and 2024-25:
                   value:
-                    periodDates:
-                      periodStartDate: '2019-04-06'
-                      periodEndDate: '2019-07-05'
-                    periodIncome:
-                      turnover: 200
-                      other: 200
-                      taxTakenOffTradingIncome: 1000.99
-                    periodExpenses:
-                      costOfGoods: 200
-                      paymentsToSubcontractors: -200
-                      wagesAndStaffCosts: -200
-                      carVanTravelExpenses: -200
-                      premisesRunningCosts: 200
-                      maintenanceCosts: 200
-                      adminCosts: -200
-                      businessEntertainmentCosts: -200
-                      advertisingCosts: -200
-                      interestOnBankOtherLoans: 200
-                      financeCharges: 200
-                      irrecoverableDebts: 200
-                      professionalFees: 200
-                      depreciation: 200
-                      otherExpenses: -200
-                    periodDisallowableExpenses:
-                      costOfGoodsDisallowable: 200
-                      paymentsToSubcontractorsDisallowable: -200
-                      wagesAndStaffCostsDisallowable: -200
-                      carVanTravelExpensesDisallowable: -200
-                      premisesRunningCostsDisallowable: 200
-                      maintenanceCostsDisallowable: 200
-                      adminCostsDisallowable: -200
-                      businessEntertainmentCostsDisallowable: -200
-                      advertisingCostsDisallowable: -200
-                      interestOnBankOtherLoansDisallowable: 200
-                      financeChargesDisallowable: 200
-                      irrecoverableDebtsDisallowable: 200
-                      professionalFeesDisallowable: 200
-                      depreciationDisallowable: 200
-                      otherExpensesDisallowable: -200
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: amend-self-employment-period-summary
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period
-                        rel: list-self-employment-period-summaries
-                        method: GET
+                    $ref: ./examples/retrievePeriodSummary/def2/non_consolidated_response.json
                 Consolidated response for TY 2023-24 and 2024-25:
                   value:
-                    periodDates:
-                      periodStartDate: '2019-07-06'
-                      periodEndDate: '2019-10-05'
-                    periodIncome:
-                      turnover: 200
-                      other: 200
-                      taxTakenOffTradingIncome: 1000.99
-                    periodExpenses:
-                      consolidatedExpenses: -200
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: amend-self-employment-period-summary
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period
-                        rel: list-self-employment-period-summaries
-                        method: GET
+                    $ref: ./examples/retrievePeriodSummary/def2/consolidated_response.json
                 Non-consolidated response for TY 2022-23 and before:
                   value:
-                    periodDates:
-                      periodStartDate: '2019-04-06'
-                      periodEndDate: '2019-07-05'
-                    periodIncome:
-                      turnover: 200
-                      other: 200
-                    periodExpenses:
-                      costOfGoods: 200
-                      paymentsToSubcontractors: 200
-                      wagesAndStaffCosts: 200
-                      carVanTravelExpenses: 200
-                      premisesRunningCosts: 200
-                      maintenanceCosts: 200
-                      adminCosts: 200
-                      businessEntertainmentCosts: 200
-                      advertisingCosts: 200
-                      interestOnBankOtherLoans: 200
-                      financeCharges: 200
-                      irrecoverableDebts: 200
-                      professionalFees: 200
-                      depreciation: 200
-                      otherExpenses: 200
-                    periodDisallowableExpenses:
-                      costOfGoodsDisallowable: 200
-                      paymentsToSubcontractorsDisallowable: 200
-                      wagesAndStaffCostsDisallowable: 200
-                      carVanTravelExpensesDisallowable: 200
-                      premisesRunningCostsDisallowable: 200
-                      maintenanceCostsDisallowable: 200
-                      adminCostsDisallowable: 200
-                      businessEntertainmentCostsDisallowable: 200
-                      advertisingCostsDisallowable: 200
-                      interestOnBankOtherLoansDisallowable: 200
-                      financeChargesDisallowable: 200
-                      irrecoverableDebtsDisallowable: 200
-                      professionalFeesDisallowable: 200
-                      depreciationDisallowable: 200
-                      otherExpensesDisallowable: 200
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: amend-self-employment-period-summary
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period
-                        rel: list-self-employment-period-summaries
-                        method: GET
+                    $ref: ./examples/retrievePeriodSummary/def1/non_consolidated_response.json
                 Consolidated response for TY 2022-23 and before:
                   value:
-                    periodDates:
-                      periodStartDate: '2019-04-06'
-                      periodEndDate: '2019-07-05'
-                    periodIncome:
-                      turnover: 200
-                      other: 200
-                    periodExpenses:
-                      consolidatedExpenses: 200
-                    links:
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: amend-self-employment-period-summary
-                        method: PUT
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period/2019-06-12_2020-06-12
-                        rel: self
-                        method: GET
-                      - href: /individuals/business/self-employment/TC663795B/XAIS12345678910/period
-                        rel: list-self-employment-period-summaries
-                        method: GET
+                    $ref: ./examples/retrievePeriodSummary/def1/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -4654,10 +4089,10 @@ paths:
                   value: *ref_18
   /individuals/business/self-employment/{nino}/{businessId}/cumulative/{taxYear}:
     put:
-      summary: Create and Amend a Self-Employment Cumulative Period Summary
       security:
         - User-Restricted:
             - write:self-assessment
+      summary: Create or Amend a Self-Employment Cumulative Period Summary
       description: |
         This endpoint enables you to submit the cumulative period income and expenses for a self-employment business that occurred between two dates. A National Insurance number, tax year and business ID are required. <strong>Please note that this endpoint is only available for tax years starting from 2025-26</strong>.
 
@@ -5020,56 +4455,10 @@ paths:
             examples:
               Non-consolidated request:
                 value:
-                  periodDates:
-                    periodStartDate: '2025-04-06'
-                    periodEndDate: '2025-07-05'
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.09
-                    taxTakenOffTradingIncome: 1000.99
-                  periodExpenses:
-                    costOfGoods: 1000.99
-                    paymentsToSubcontractors: 1000.99
-                    wagesAndStaffCosts: 1000.99
-                    carVanTravelExpenses: 1000.99
-                    premisesRunningCosts: -1000.99
-                    maintenanceCosts: -1000.99
-                    adminCosts: 1000.99
-                    businessEntertainmentCosts: 1000.99
-                    advertisingCosts: 1000.99
-                    interestOnBankOtherLoans: -1000.99
-                    financeCharges: -1000.99
-                    irrecoverableDebts: -1000.99
-                    professionalFees: 1000.99
-                    depreciation: -1000.99
-                    otherExpenses: 1000.99
-                  periodDisallowableExpenses:
-                    costOfGoodsDisallowable: 91000.99
-                    paymentsToSubcontractorsDisallowable: 1000.99
-                    wagesAndStaffCostsDisallowable: 1000.99
-                    carVanTravelExpensesDisallowable: 1000.99
-                    premisesRunningCostsDisallowable: -1000.99
-                    maintenanceCostsDisallowable: -999.99
-                    adminCostsDisallowable: 1000.99
-                    businessEntertainmentCostsDisallowable: 1000.99
-                    advertisingCostsDisallowable: 1000.99
-                    interestOnBankOtherLoansDisallowable: -1000.99
-                    financeChargesDisallowable: -1000.99
-                    irrecoverableDebtsDisallowable: 1000.99
-                    professionalFeesDisallowable: 1000.99
-                    depreciationDisallowable: -1000.99
-                    otherExpensesDisallowable: 1000.99
+                  $ref: ./examples/createAmendCumulativePeriodSummary/non_consolidated_request.json
               Consolidated request:
                 value:
-                  periodDates:
-                    periodStartDate: '2025-04-06'
-                    periodEndDate: '2025-07-05'
-                  periodIncome:
-                    turnover: 1000.99
-                    other: 1000.09
-                    taxTakenOffTradingIncome: 1000.99
-                  periodExpenses:
-                    consolidatedExpenses: 1000.99
+                  $ref: ./examples/createAmendCumulativePeriodSummary/consolidated_request.json
       responses:
         '204':
           description: Success (No Content)
@@ -5314,10 +4703,10 @@ paths:
                     The supplied income source could not be found.
                   value: *ref_18
     get:
-      summary: Retrieve a Self-Employment Period Summary
       security:
         - User-Restricted:
             - read:self-assessment
+      summary: Retrieve a Self-Employment Cumulative Period Summary
       description: |
         This endpoint enables you to retrieve the cumulative period income and expenses for a self-employment business that occurred between two dates.
         A National Insurance number, tax year and business ID are required. <strong>Please note that this endpoint is only available for tax years starting from 2025-26</strong>.
@@ -5694,56 +5083,10 @@ paths:
               examples:
                 Non-consolidated response:
                   value:
-                    periodDates:
-                      periodStartDate: '2025-04-06'
-                      periodEndDate: '2025-07-05'
-                    periodIncome:
-                      turnover: 200
-                      other: 200
-                      taxTakenOffTradingIncome: 1000.99
-                    periodExpenses:
-                      costOfGoods: 200
-                      paymentsToSubcontractors: 200
-                      wagesAndStaffCosts: 200
-                      carVanTravelExpenses: 200
-                      premisesRunningCosts: 200
-                      maintenanceCosts: 200
-                      adminCosts: 200
-                      businessEntertainmentCosts: 200
-                      advertisingCosts: 200
-                      interestOnBankOtherLoans: 200
-                      financeCharges: 200
-                      irrecoverableDebts: 200
-                      professionalFees: 200
-                      depreciation: 200
-                      otherExpenses: 200
-                    periodDisallowableExpenses:
-                      costOfGoodsDisallowable: 200
-                      paymentsToSubcontractorsDisallowable: 200
-                      wagesAndStaffCostsDisallowable: 200
-                      carVanTravelExpensesDisallowable: 200
-                      premisesRunningCostsDisallowable: 200
-                      maintenanceCostsDisallowable: 200
-                      adminCostsDisallowable: 200
-                      businessEntertainmentCostsDisallowable: 200
-                      advertisingCostsDisallowable: 200
-                      interestOnBankOtherLoansDisallowable: 200
-                      financeChargesDisallowable: 200
-                      irrecoverableDebtsDisallowable: 200
-                      professionalFeesDisallowable: 200
-                      depreciationDisallowable: 200
-                      otherExpensesDisallowable: 200
+                    $ref: ./examples/retrieveCumulativePeriodSummary/def1/non_consolidated_response.json
                 Consolidated response:
                   value:
-                    periodDates:
-                      periodStartDate: '2025-04-06'
-                      periodEndDate: '2025-07-05'
-                    periodIncome:
-                      turnover: 200
-                      other: 200
-                      taxTakenOffTradingIncome: 1000.99
-                    periodExpenses:
-                      consolidatedExpenses: 200
+                    $ref: ./examples/retrieveCumulativePeriodSummary/def1/consolidated_response.json
         '400':
           description: Bad request
           headers:
