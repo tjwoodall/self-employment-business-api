@@ -49,11 +49,9 @@ requestBody:
         "Without trading allowance request for TY 2024-25":
           externalValue: './examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json'
         "With trading allowance request for TY 2025-26 onwards":
-          "value":
-            "$ref": './examples/createAmendAnnualSubmission/def3/with_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def3/with_trading_income_allowance.json'
         "Without trading allowance request for TY 2025-26 onwards":
-          "value":
-            "$ref": './examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json'
+          externalValue: './examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json'
 
 responses:
   "204":
