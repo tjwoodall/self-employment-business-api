@@ -166,11 +166,13 @@ paths:
                         type: string
                         description: "The first day that the income, expenses and\
                           \ deduction period summary covers."
+                        format: date
                         example: 2020-01-01
                       periodEndDate:
                         type: string
                         description: "The last day that the income, expenses and deduction\
                           \ period summary covers."
+                        format: date
                         example: 2020-01-01
                     additionalProperties: false
                     description: Object containing the details about self-employment
@@ -179,19 +181,25 @@ paths:
                     type: object
                     properties:
                       turnover:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "The takings, fees, sales or money earned by\
                           \ the business. Income associated with the running of the\
                           \ business. The value must be between 0 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.00
+                        example: 2000.99
                       other:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Any other business income not included in turnover.
                           Income associated with the running of the business. The
                           value must be between 0 and 99999999999.99 up to 2 decimal
                           places.
-                        example: 10000.00
+                        example: 2000.99
                     additionalProperties: false
                     description: Object containing the details about self-employment
                       income.
@@ -199,109 +207,157 @@ paths:
                     type: object
                     properties:
                       consolidatedExpenses:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: The sum of all allowable expenses for the specified
                           period. The value must be between 0 and 99999999999.99 up
                           to 2 decimal places.
-                        example: 10000.00
+                        example: 2000.99
                       costOfGoods:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Cost of goods bought for resale or goods used.
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.00
+                        example: 2000.99
                       paymentsToSubcontractors:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Payments to construction industry subcontractors.
                           Expenses associated with the running of the business. The
                           value must be between 0 and 99999999999.99 up to 2 decimal
                           places.
-                        example: 10000.00
+                        example: 2000.99
                       wagesAndStaffCosts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "Wages, salaries and other staff costs. Expenses\
                           \ associated with the running of the business. The value\
                           \ must be between 0 and 99999999999.99 up to 2 decimal places."
-                        example: 10000.00
+                        example: 2000.99
                       carVanTravelExpenses:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "Car, van and travel expenses associated with\
                           \ the running of the business. The value must be between\
                           \ 0 and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       premisesRunningCosts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: "Rent, rates, power and insurance costs. Expenses\
                           \ associated with the running of the business. The value\
                           \ must be between -99999999999.99 and 99999999999.99 up\
                           \ to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       maintenanceCosts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Repairs and renewals of property and equipment.
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       adminCosts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "Phone, fax, stationery and other office costs.\
                           \ Expenses associated with the running of the business.\
                           \ The value must be between 0 and 99999999999.99 up to 2\
                           \ decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       businessEntertainmentCosts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Business entertainment costs. Expenses associated
                           with the running of the business. The value must be between
                           0 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       advertisingCosts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Advertising costs. Expenses associated with the
                           running of the business. The value must be between 0 and
                           99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       interestOnBankOtherLoans:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Interest on bank and other loans. Expenses associated
                           with the running of the business. The value must be between
                           -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       financeCharges:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: "Bank, credit card and other financial charges.\
                           \ Expenses associated with the running of the business.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       irrecoverableDebts:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Irrecoverable debts written off. Expenses associated
                           with the running of the business. The value must be between
                           -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       professionalFees:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: "Accountancy, legal and other professional fees.\
                           \ Expenses associated with the running of the business.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       depreciation:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Depreciation and loss/profit on sales of assets.
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       otherExpenses:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Other business expenses associated with the running
                           of the business. The value must be between 0 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                     additionalProperties: false
                     description: Object containing the details about self-employment
                       expenses.
@@ -309,108 +365,153 @@ paths:
                     type: object
                     properties:
                       costOfGoodsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Cost of goods bought for resale or goods used.
                           Any expense or partial expense that cannot be claimed for
                           tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.45
+                        example: 2000.99
                       paymentsToSubcontractorsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Payments to subcontractors - Construction Industry
                           Scheme (CIS). Any expense or partial expense that cannot
                           be claimed for tax purposes. The value must be between 0
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       wagesAndStaffCostsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "Wages, salaries and other staff costs. Any expense\
                           \ or partial expense that cannot be claimed for tax purposes.\
                           \ The value must be between 0 and 99999999999.99 up to 2\
                           \ decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       carVanTravelExpensesDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "Car, van and travel expenses. Any expense or\
                           \ partial expense that cannot be claimed for tax purposes.\
                           \ The value must be between 0 and 99999999999.99 up to 2\
                           \ decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       premisesRunningCostsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: "Rent, rates, power and insurance costs. Any\
                           \ expense or partial expense that cannot be claimed for\
                           \ tax purposes. The value must be between -99999999999.99\
                           \ and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       maintenanceCostsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Repairs and renewals of property and equipment.
                           Any expense or partial expense that cannot be claimed for
                           tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       adminCostsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: "Phone, fax, stationery and other office costs.\
                           \ Any expense or partial expense that cannot be claimed\
                           \ for tax purposes. The value must be between 0 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       businessEntertainmentCostsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Business entertainment costs. Any expense or
                           partial expense that cannot be claimed for tax purposes.
                           The value must be between 0 and 99999999999.99 up to 2 decimal
                           places.
-                        example: 10000.89
+                        example: 2000.99
                       advertisingCostsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Advertising costs. Any expense or partial expense
                           that cannot be claimed for tax purposes. The value must
                           be between 0 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       interestOnBankOtherLoansDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Interest on bank and other loans. Any expense
                           or partial expense that cannot be claimed for tax purposes.
                           The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       financeChargesDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: "Bank, credit card and other financial charges.\
                           \ Any expense or partial expense that cannot be claimed\
                           \ for tax purposes. The value must be between -99999999999.99\
                           \ and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       irrecoverableDebtsDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Irrecoverable debts written off. Any expense
                           or partial expense that cannot be claimed for tax purposes.
                           The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       professionalFeesDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Legal and other professional fees. Any expense
                           or partial expense that cannot be claimed for tax purposes.
                           The value must be between 0 and 99999999999.99 up to 2 decimal
                           places.
-                        example: 10000.89
+                        example: 2000.99
                       depreciationDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: -99999999999.99
                         type: number
                         description: Depreciation and loss/profit on sales of assets.
                           Any expense or partial expense that cannot be claimed for
                           tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       otherExpensesDisallowable:
+                        multipleOf: 0.01
+                        maximum: 99999999999.99
+                        minimum: 0
                         type: number
                         description: Other business expenses. Any expense or partial
                           expense that cannot be claimed for tax purposes. The value
                           must be between 0 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                     additionalProperties: false
                     description: Object containing the details about self-employment
                       disallowable expenses that cannot be claimed for tax purposes.
@@ -431,11 +532,13 @@ paths:
                         type: string
                         description: "The first day that the income, expenses and\
                           \ deduction period summary covers."
+                        format: date
                         example: 2020-01-01
                       periodEndDate:
                         type: string
                         description: "The last day that the income, expenses and deduction\
                           \ period summary covers."
+                        format: date
                         example: 2020-01-01
                     additionalProperties: false
                     description: Object containing the details about self-employment
@@ -452,7 +555,7 @@ paths:
                           \ the business. Income associated with the running of the\
                           \ business. The value must be between 0 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.00
+                        example: 2000.99
                       other:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -462,7 +565,7 @@ paths:
                           Income associated with the running of the business. The
                           value must be between 0 and 99999999999.99 up to 2 decimal
                           places.
-                        example: 10000.00
+                        example: 2000.99
                       taxTakenOffTradingIncome:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -471,7 +574,7 @@ paths:
                         description: Other tax taken off trading income apart from
                           CIS deductions. The value must be between 0 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.00
+                        example: 2000.99
                     additionalProperties: false
                     description: Object containing the details about self-employment
                       income.
@@ -486,7 +589,7 @@ paths:
                         description: The sum of all allowable expenses for the specified
                           period. The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.00
+                        example: 2000.99
                       costOfGoods:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -496,7 +599,7 @@ paths:
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.00
+                        example: 2000.99
                       paymentsToSubcontractors:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -506,7 +609,7 @@ paths:
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.00
+                        example: 2000.99
                       wagesAndStaffCosts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -516,7 +619,7 @@ paths:
                           \ associated with the running of the business. The value\
                           \ must be between -99999999999.99 and 99999999999.99 up\
                           \ to 2 decimal places."
-                        example: 10000.00
+                        example: 2000.99
                       carVanTravelExpenses:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -525,7 +628,7 @@ paths:
                         description: "Car, van and travel expenses associated with\
                           \ the running of the business. The value must be between\
                           \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       premisesRunningCosts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -535,7 +638,7 @@ paths:
                           \ associated with the running of the business. The value\
                           \ must be between -99999999999.99 and 99999999999.99 up\
                           \ to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       maintenanceCosts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -545,7 +648,7 @@ paths:
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       adminCosts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -555,7 +658,7 @@ paths:
                           \ Expenses associated with the running of the business.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       businessEntertainmentCosts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -564,7 +667,7 @@ paths:
                         description: Business entertainment costs. Expenses associated
                           with the running of the business. The value must be between
                           -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       advertisingCosts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -573,7 +676,7 @@ paths:
                         description: Advertising costs. Expenses associated with the
                           running of the business. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       interestOnBankOtherLoans:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -582,7 +685,7 @@ paths:
                         description: Interest on bank and other loans. Expenses associated
                           with the running of the business. The value must be between
                           -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       financeCharges:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -592,7 +695,7 @@ paths:
                           \ Expenses associated with the running of the business.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       irrecoverableDebts:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -601,7 +704,7 @@ paths:
                         description: Irrecoverable debts written off. Expenses associated
                           with the running of the business. The value must be between
                           -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       professionalFees:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -611,7 +714,7 @@ paths:
                           \ Expenses associated with the running of the business.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       depreciation:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -621,7 +724,7 @@ paths:
                           Expenses associated with the running of the business. The
                           value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       otherExpenses:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -630,7 +733,7 @@ paths:
                         description: Other business expenses associated with the running
                           of the business. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                     additionalProperties: false
                     description: Object containing the details about self-employment
                       expenses.
@@ -646,7 +749,7 @@ paths:
                           Any expense or partial expense that cannot be claimed for
                           tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.45
+                        example: 2000.99
                       paymentsToSubcontractorsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -656,7 +759,7 @@ paths:
                           Scheme (CIS). Any expense or partial expense that cannot
                           be claimed for tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       wagesAndStaffCostsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -666,7 +769,7 @@ paths:
                           \ or partial expense that cannot be claimed for tax purposes.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       carVanTravelExpensesDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -676,7 +779,7 @@ paths:
                           \ partial expense that cannot be claimed for tax purposes.\
                           \ The value must be between -99999999999.99 and 99999999999.99\
                           \ up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       premisesRunningCostsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -686,7 +789,7 @@ paths:
                           \ expense or partial expense that cannot be claimed for\
                           \ tax purposes. The value must be between -99999999999.99\
                           \ and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       maintenanceCostsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -696,7 +799,7 @@ paths:
                           Any expense or partial expense that cannot be claimed for
                           tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       adminCostsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -706,7 +809,7 @@ paths:
                           \ Any expense or partial expense that cannot be claimed\
                           \ for tax purposes. The value must be between -99999999999.99\
                           \ and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       businessEntertainmentCostsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -716,7 +819,7 @@ paths:
                           partial expense that cannot be claimed for tax purposes.
                           The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       advertisingCostsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -726,7 +829,7 @@ paths:
                           that cannot be claimed for tax purposes. The value must
                           be between -99999999999.99 and 99999999999.99 up to 2 decimal
                           places.
-                        example: 10000.89
+                        example: 2000.99
                       interestOnBankOtherLoansDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -736,7 +839,7 @@ paths:
                           or partial expense that cannot be claimed for tax purposes.
                           The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       financeChargesDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -746,7 +849,7 @@ paths:
                           \ Any expense or partial expense that cannot be claimed\
                           \ for tax purposes. The value must be between -99999999999.99\
                           \ and 99999999999.99 up to 2 decimal places."
-                        example: 10000.89
+                        example: 2000.99
                       irrecoverableDebtsDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -756,7 +859,7 @@ paths:
                           or partial expense that cannot be claimed for tax purposes.
                           The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       professionalFeesDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -766,7 +869,7 @@ paths:
                           or partial expense that cannot be claimed for tax purposes.
                           The value must be between -99999999999.99 and 99999999999.99
                           up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       depreciationDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -776,7 +879,7 @@ paths:
                           Any expense or partial expense that cannot be claimed for
                           tax purposes. The value must be between -99999999999.99
                           and 99999999999.99 up to 2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                       otherExpensesDisallowable:
                         multipleOf: 0.01
                         maximum: 99999999999.99
@@ -786,7 +889,7 @@ paths:
                           expense that cannot be claimed for tax purposes. The value
                           must be between -99999999999.99 and 99999999999.99 up to
                           2 decimal places.
-                        example: 10000.89
+                        example: 2000.99
                     additionalProperties: false
                     description: Object containing the details about self-employment
                       disallowable expenses that cannot be claimed for tax purposes.
@@ -1246,13 +1349,15 @@ paths:
                           type: string
                           description: "The first day that the income, expenses and\
                             \ deduction period summary covers. Must conform to the\
-                            \ format: YYYY-MM-DD"
+                            \ format: `YYYY-MM-DD`"
+                          format: date
                           example: 2020-01-01
                         periodEndDate:
                           type: string
                           description: "The last day that the income, expenses and\
                             \ deduction period summary covers. Must conform to the\
-                            \ format: YYYY-MM-DD"
+                            \ format: `YYYY-MM-DD`"
+                          format: date
                           example: 2020-01-01
                       description: Details about Self-Employment periods.
                 additionalProperties: false
@@ -1499,11 +1604,13 @@ components:
               type: string
               description: "The first day that the income, expenses and deduction\
                 \ period summary covers."
+              format: date
               example: 2020-01-01
             periodEndDate:
               type: string
               description: "The last day that the income, expenses and deduction period\
                 \ summary covers."
+              format: date
               example: 2020-01-01
           additionalProperties: false
           description: Object containing the details about self-employment period
@@ -1512,218 +1619,317 @@ components:
           type: object
           properties:
             turnover:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "The takings, fees, sales or money earned by the business.\
                 \ Income associated with the running of the business. The value must\
                 \ be between 0 and 99999999999.99 up to 2 decimal places."
-              example: 10000.00
+              example: 2000.99
             other:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Any other business income not included in turnover. Income
                 associated with the running of the business. The value must be between
                 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
           additionalProperties: false
           description: Object containing the details about self-employment income.
         periodExpenses:
           type: object
           properties:
             consolidatedExpenses:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: The sum of all allowable expenses for the specified period.
                 The value must be between 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             costOfGoods:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Cost of goods bought for resale or goods used. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             paymentsToSubcontractors:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Payments to construction industry subcontractors. Expenses
                 associated with the running of the business. The value must be between
                 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             wagesAndStaffCosts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "Wages, salaries and other staff costs. Expenses associated\
                 \ with the running of the business. The value must be between 0 and\
                 \ 99999999999.99 up to 2 decimal places."
-              example: 10000.00
+              example: 2000.99
             carVanTravelExpenses:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "Car, van and travel expenses associated with the running\
                 \ of the business. The value must be between 0 and 99999999999.99\
                 \ up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             premisesRunningCosts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: "Rent, rates, power and insurance costs. Expenses associated\
                 \ with the running of the business. The value must be between -99999999999.99\
                 \ and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             maintenanceCosts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Repairs and renewals of property and equipment. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             adminCosts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "Phone, fax, stationery and other office costs. Expenses\
                 \ associated with the running of the business. The value must be between\
                 \ 0 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             businessEntertainmentCosts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Business entertainment costs. Expenses associated with
                 the running of the business. The value must be between 0 and 99999999999.99
                 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             advertisingCosts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Advertising costs. Expenses associated with the running
                 of the business. The value must be between 0 and 99999999999.99 up
                 to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             interestOnBankOtherLoans:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Interest on bank and other loans. Expenses associated with
                 the running of the business. The value must be between -99999999999.99
                 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             financeCharges:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: "Bank, credit card and other financial charges. Expenses\
                 \ associated with the running of the business. The value must be between\
                 \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             irrecoverableDebts:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Irrecoverable debts written off. Expenses associated with
                 the running of the business. The value must be between -99999999999.99
                 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             professionalFees:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: "Accountancy, legal and other professional fees. Expenses\
                 \ associated with the running of the business. The value must be between\
                 \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             depreciation:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Depreciation and loss/profit on sales of assets. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             otherExpenses:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Other business expenses associated with the running of
                 the business. The value must be between 0 and 99999999999.99 up to
                 2 decimal places.
-              example: 10000.89
+              example: 2000.99
           additionalProperties: false
           description: Object containing the details about self-employment expenses.
         periodDisallowableExpenses:
           type: object
           properties:
             costOfGoodsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Cost of goods bought for resale or goods used. Any expense
                 or partial expense that cannot be claimed for tax purposes. The value
                 must be between -99999999999.99 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.45
+              example: 2000.99
             paymentsToSubcontractorsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Payments to subcontractors - Construction Industry Scheme
                 (CIS). Any expense or partial expense that cannot be claimed for tax
                 purposes. The value must be between 0 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.89
+              example: 2000.99
             wagesAndStaffCostsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "Wages, salaries and other staff costs. Any expense or\
                 \ partial expense that cannot be claimed for tax purposes. The value\
                 \ must be between 0 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             carVanTravelExpensesDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "Car, van and travel expenses. Any expense or partial expense\
                 \ that cannot be claimed for tax purposes. The value must be between\
                 \ 0 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             premisesRunningCostsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: "Rent, rates, power and insurance costs. Any expense or\
                 \ partial expense that cannot be claimed for tax purposes. The value\
                 \ must be between -99999999999.99 and 99999999999.99 up to 2 decimal\
                 \ places."
-              example: 10000.89
+              example: 2000.99
             maintenanceCostsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Repairs and renewals of property and equipment. Any expense
                 or partial expense that cannot be claimed for tax purposes. The value
                 must be between -99999999999.99 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.89
+              example: 2000.99
             adminCostsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: "Phone, fax, stationery and other office costs. Any expense\
                 \ or partial expense that cannot be claimed for tax purposes. The\
                 \ value must be between 0 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             businessEntertainmentCostsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Business entertainment costs. Any expense or partial expense
                 that cannot be claimed for tax purposes. The value must be between
                 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             advertisingCostsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Advertising costs. Any expense or partial expense that
                 cannot be claimed for tax purposes. The value must be between 0 and
                 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             interestOnBankOtherLoansDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Interest on bank and other loans. Any expense or partial
                 expense that cannot be claimed for tax purposes. The value must be
                 between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             financeChargesDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: "Bank, credit card and other financial charges. Any expense\
                 \ or partial expense that cannot be claimed for tax purposes. The\
                 \ value must be between -99999999999.99 and 99999999999.99 up to 2\
                 \ decimal places."
-              example: 10000.89
+              example: 2000.99
             irrecoverableDebtsDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Irrecoverable debts written off. Any expense or partial
                 expense that cannot be claimed for tax purposes. The value must be
                 between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             professionalFeesDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Legal and other professional fees. Any expense or partial
                 expense that cannot be claimed for tax purposes. The value must be
                 between 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             depreciationDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: -99999999999.99
               type: number
               description: Depreciation and loss/profit on sales of assets. Any expense
                 or partial expense that cannot be claimed for tax purposes. The value
                 must be between -99999999999.99 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.89
+              example: 2000.99
             otherExpensesDisallowable:
+              multipleOf: 0.01
+              maximum: 99999999999.99
+              minimum: 0
               type: number
               description: Other business expenses. Any expense or partial expense
                 that cannot be claimed for tax purposes. The value must be between
                 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
           additionalProperties: false
           description: Object containing the details about self-employment disallowable
             expenses that cannot be claimed for tax purposes.
@@ -1745,11 +1951,13 @@ components:
               type: string
               description: "The first day that the income, expenses and deduction\
                 \ period summary covers."
+              format: date
               example: 2020-01-01
             periodEndDate:
               type: string
               description: "The last day that the income, expenses and deduction period\
                 \ summary covers."
+              format: date
               example: 2020-01-01
           additionalProperties: false
           description: Object containing the details about self-employment period
@@ -1765,7 +1973,7 @@ components:
               description: "The takings, fees, sales or money earned by the business.\
                 \ Income associated with the running of the business. The value must\
                 \ be between 0 and 99999999999.99 up to 2 decimal places."
-              example: 10000.00
+              example: 2000.99
             other:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1774,7 +1982,7 @@ components:
               description: Any other business income not included in turnover. Income
                 associated with the running of the business. The value must be between
                 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             taxTakenOffTradingIncome:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1782,7 +1990,7 @@ components:
               type: number
               description: Other tax taken off trading income apart from CIS deductions.
                 The value must be between 0 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
           additionalProperties: false
           description: Object containing the details about self-employment income.
         periodExpenses:
@@ -1796,7 +2004,7 @@ components:
               description: The sum of all allowable expenses for the specified period.
                 The value must be between -99999999999.99 and 99999999999.99 up to
                 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             costOfGoods:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1805,7 +2013,7 @@ components:
               description: Cost of goods bought for resale or goods used. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             paymentsToSubcontractors:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1814,7 +2022,7 @@ components:
               description: Payments to construction industry subcontractors. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.00
+              example: 2000.99
             wagesAndStaffCosts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1823,7 +2031,7 @@ components:
               description: "Wages, salaries and other staff costs. Expenses associated\
                 \ with the running of the business. The value must be between -99999999999.99\
                 \ and 99999999999.99 up to 2 decimal places."
-              example: 10000.00
+              example: 2000.99
             carVanTravelExpenses:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1832,7 +2040,7 @@ components:
               description: "Car, van and travel expenses associated with the running\
                 \ of the business. The value must be between -99999999999.99 and 99999999999.99\
                 \ up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             premisesRunningCosts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1841,7 +2049,7 @@ components:
               description: "Rent, rates, power and insurance costs. Expenses associated\
                 \ with the running of the business. The value must be between -99999999999.99\
                 \ and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             maintenanceCosts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1850,7 +2058,7 @@ components:
               description: Repairs and renewals of property and equipment. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             adminCosts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1859,7 +2067,7 @@ components:
               description: "Phone, fax, stationery and other office costs. Expenses\
                 \ associated with the running of the business. The value must be between\
                 \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             businessEntertainmentCosts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1868,7 +2076,7 @@ components:
               description: Business entertainment costs. Expenses associated with
                 the running of the business. The value must be between -99999999999.99
                 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             advertisingCosts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1877,7 +2085,7 @@ components:
               description: Advertising costs. Expenses associated with the running
                 of the business. The value must be between -99999999999.99 and 99999999999.99
                 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             interestOnBankOtherLoans:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1886,7 +2094,7 @@ components:
               description: Interest on bank and other loans. Expenses associated with
                 the running of the business. The value must be between -99999999999.99
                 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             financeCharges:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1895,7 +2103,7 @@ components:
               description: "Bank, credit card and other financial charges. Expenses\
                 \ associated with the running of the business. The value must be between\
                 \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             irrecoverableDebts:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1904,7 +2112,7 @@ components:
               description: Irrecoverable debts written off. Expenses associated with
                 the running of the business. The value must be between -99999999999.99
                 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             professionalFees:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1913,7 +2121,7 @@ components:
               description: "Accountancy, legal and other professional fees. Expenses\
                 \ associated with the running of the business. The value must be between\
                 \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             depreciation:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1922,7 +2130,7 @@ components:
               description: Depreciation and loss/profit on sales of assets. Expenses
                 associated with the running of the business. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             otherExpenses:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1931,7 +2139,7 @@ components:
               description: Other business expenses associated with the running of
                 the business. The value must be between -99999999999.99 and 99999999999.99
                 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
           additionalProperties: false
           description: Object containing the details about self-employment expenses.
         periodDisallowableExpenses:
@@ -1946,7 +2154,7 @@ components:
                 or partial expense that cannot be claimed for tax purposes. The value
                 must be between -99999999999.99 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.45
+              example: 2000.99
             paymentsToSubcontractorsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1956,7 +2164,7 @@ components:
                 (CIS). Any expense or partial expense that cannot be claimed for tax
                 purposes. The value must be between -99999999999.99 and 99999999999.99
                 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             wagesAndStaffCostsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1966,7 +2174,7 @@ components:
                 \ partial expense that cannot be claimed for tax purposes. The value\
                 \ must be between -99999999999.99 and 99999999999.99 up to 2 decimal\
                 \ places."
-              example: 10000.89
+              example: 2000.99
             carVanTravelExpensesDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1975,7 +2183,7 @@ components:
               description: "Car, van and travel expenses. Any expense or partial expense\
                 \ that cannot be claimed for tax purposes. The value must be between\
                 \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-              example: 10000.89
+              example: 2000.99
             premisesRunningCostsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1985,7 +2193,7 @@ components:
                 \ partial expense that cannot be claimed for tax purposes. The value\
                 \ must be between -99999999999.99 and 99999999999.99 up to 2 decimal\
                 \ places."
-              example: 10000.89
+              example: 2000.99
             maintenanceCostsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -1995,7 +2203,7 @@ components:
                 or partial expense that cannot be claimed for tax purposes. The value
                 must be between -99999999999.99 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.89
+              example: 2000.99
             adminCostsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2005,7 +2213,7 @@ components:
                 \ or partial expense that cannot be claimed for tax purposes. The\
                 \ value must be between -99999999999.99 and 99999999999.99 up to 2\
                 \ decimal places."
-              example: 10000.89
+              example: 2000.99
             businessEntertainmentCostsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2014,7 +2222,7 @@ components:
               description: Business entertainment costs. Any expense or partial expense
                 that cannot be claimed for tax purposes. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             advertisingCostsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2023,7 +2231,7 @@ components:
               description: Advertising costs. Any expense or partial expense that
                 cannot be claimed for tax purposes. The value must be between -99999999999.99
                 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             interestOnBankOtherLoansDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2032,7 +2240,7 @@ components:
               description: Interest on bank and other loans. Any expense or partial
                 expense that cannot be claimed for tax purposes. The value must be
                 between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             financeChargesDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2042,7 +2250,7 @@ components:
                 \ or partial expense that cannot be claimed for tax purposes. The\
                 \ value must be between -99999999999.99 and 99999999999.99 up to 2\
                 \ decimal places."
-              example: 10000.89
+              example: 2000.99
             irrecoverableDebtsDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2051,7 +2259,7 @@ components:
               description: Irrecoverable debts written off. Any expense or partial
                 expense that cannot be claimed for tax purposes. The value must be
                 between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             professionalFeesDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2060,7 +2268,7 @@ components:
               description: Legal and other professional fees. Any expense or partial
                 expense that cannot be claimed for tax purposes. The value must be
                 between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
             depreciationDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2070,7 +2278,7 @@ components:
                 or partial expense that cannot be claimed for tax purposes. The value
                 must be between -99999999999.99 and 99999999999.99 up to 2 decimal
                 places.
-              example: 10000.89
+              example: 2000.99
             otherExpensesDisallowable:
               multipleOf: 0.01
               maximum: 99999999999.99
@@ -2079,7 +2287,7 @@ components:
               description: Other business expenses. Any expense or partial expense
                 that cannot be claimed for tax purposes. The value must be between
                 -99999999999.99 and 99999999999.99 up to 2 decimal places.
-              example: 10000.89
+              example: 2000.99
           additionalProperties: false
           description: Object containing the details about self-employment disallowable
             expenses that cannot be claimed for tax purposes.
@@ -2133,12 +2341,14 @@ components:
               periodStartDate:
                 type: string
                 description: "The first day that the income, expenses and deduction\
-                  \ period summary covers. Must conform to the format: YYYY-MM-DD"
+                  \ period summary covers. Must conform to the format: `YYYY-MM-DD`"
+                format: date
                 example: 2020-01-01
               periodEndDate:
                 type: string
                 description: "The last day that the income, expenses and deduction\
-                  \ period summary covers. Must conform to the format: YYYY-MM-DD"
+                  \ period summary covers. Must conform to the format: `YYYY-MM-DD`"
+                format: date
                 example: 2020-01-01
             description: Details about Self-Employment periods.
       additionalProperties: false
@@ -2153,11 +2363,13 @@ components:
           type: string
           description: "The first day that the income, expenses and deduction period\
             \ summary covers."
+          format: date
           example: 2020-01-01
         periodEndDate:
           type: string
           description: "The last day that the income, expenses and deduction period\
             \ summary covers."
+          format: date
           example: 2020-01-01
       additionalProperties: false
       description: Object containing the details about self-employment period dates.
@@ -2165,212 +2377,311 @@ components:
       type: object
       properties:
         turnover:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "The takings, fees, sales or money earned by the business.\
             \ Income associated with the running of the business. The value must be\
             \ between 0 and 99999999999.99 up to 2 decimal places."
-          example: 10000.00
+          example: 2000.99
         other:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Any other business income not included in turnover. Income
             associated with the running of the business. The value must be between
             0 and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
       additionalProperties: false
       description: Object containing the details about self-employment income.
     period_expenses:
       type: object
       properties:
         consolidatedExpenses:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: The sum of all allowable expenses for the specified period.
             The value must be between 0 and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
         costOfGoods:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Cost of goods bought for resale or goods used. Expenses associated
             with the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
         paymentsToSubcontractors:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Payments to construction industry subcontractors. Expenses
             associated with the running of the business. The value must be between
             0 and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
         wagesAndStaffCosts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "Wages, salaries and other staff costs. Expenses associated\
             \ with the running of the business. The value must be between 0 and 99999999999.99\
             \ up to 2 decimal places."
-          example: 10000.00
+          example: 2000.99
         carVanTravelExpenses:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "Car, van and travel expenses associated with the running of\
             \ the business. The value must be between 0 and 99999999999.99 up to 2\
             \ decimal places."
-          example: 10000.89
+          example: 2000.99
         premisesRunningCosts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: "Rent, rates, power and insurance costs. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         maintenanceCosts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Repairs and renewals of property and equipment. Expenses associated
             with the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         adminCosts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "Phone, fax, stationery and other office costs. Expenses associated\
             \ with the running of the business. The value must be between 0 and 99999999999.99\
             \ up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         businessEntertainmentCosts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Business entertainment costs. Expenses associated with the
             running of the business. The value must be between 0 and 99999999999.99
             up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         advertisingCosts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Advertising costs. Expenses associated with the running of
             the business. The value must be between 0 and 99999999999.99 up to 2 decimal
             places.
-          example: 10000.89
+          example: 2000.99
         interestOnBankOtherLoans:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Interest on bank and other loans. Expenses associated with
             the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         financeCharges:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: "Bank, credit card and other financial charges. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         irrecoverableDebts:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Irrecoverable debts written off. Expenses associated with the
             running of the business. The value must be between -99999999999.99 and
             99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         professionalFees:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: "Accountancy, legal and other professional fees. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         depreciation:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Depreciation and loss/profit on sales of assets. Expenses associated
             with the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         otherExpenses:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Other business expenses associated with the running of the
             business. The value must be between 0 and 99999999999.99 up to 2 decimal
             places.
-          example: 10000.89
+          example: 2000.99
       additionalProperties: false
       description: Object containing the details about self-employment expenses.
     period_disallowable_expenses:
       type: object
       properties:
         costOfGoodsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Cost of goods bought for resale or goods used. Any expense
             or partial expense that cannot be claimed for tax purposes. The value
             must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.45
+          example: 2000.99
         paymentsToSubcontractorsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Payments to subcontractors - Construction Industry Scheme (CIS).
             Any expense or partial expense that cannot be claimed for tax purposes.
             The value must be between 0 and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         wagesAndStaffCostsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "Wages, salaries and other staff costs. Any expense or partial\
             \ expense that cannot be claimed for tax purposes. The value must be between\
             \ 0 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         carVanTravelExpensesDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "Car, van and travel expenses. Any expense or partial expense\
             \ that cannot be claimed for tax purposes. The value must be between 0\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         premisesRunningCostsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: "Rent, rates, power and insurance costs. Any expense or partial\
             \ expense that cannot be claimed for tax purposes. The value must be between\
             \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         maintenanceCostsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Repairs and renewals of property and equipment. Any expense
             or partial expense that cannot be claimed for tax purposes. The value
             must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         adminCostsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: "Phone, fax, stationery and other office costs. Any expense\
             \ or partial expense that cannot be claimed for tax purposes. The value\
             \ must be between 0 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         businessEntertainmentCostsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Business entertainment costs. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between 0 and
             99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         advertisingCostsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Advertising costs. Any expense or partial expense that cannot
             be claimed for tax purposes. The value must be between 0 and 99999999999.99
             up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         interestOnBankOtherLoansDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Interest on bank and other loans. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         financeChargesDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: "Bank, credit card and other financial charges. Any expense\
             \ or partial expense that cannot be claimed for tax purposes. The value\
             \ must be between -99999999999.99 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         irrecoverableDebtsDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Irrecoverable debts written off. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         professionalFeesDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Legal and other professional fees. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between 0 and
             99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         depreciationDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: -99999999999.99
           type: number
           description: Depreciation and loss/profit on sales of assets. Any expense
             or partial expense that cannot be claimed for tax purposes. The value
             must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         otherExpensesDisallowable:
+          multipleOf: 0.01
+          maximum: 99999999999.99
+          minimum: 0
           type: number
           description: Other business expenses. Any expense or partial expense that
             cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99
             up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
       additionalProperties: false
       description: Object containing the details about self-employment disallowable
         expenses that cannot be claimed for tax purposes.
@@ -2385,7 +2696,7 @@ components:
           description: "The takings, fees, sales or money earned by the business.\
             \ Income associated with the running of the business. The value must be\
             \ between 0 and 99999999999.99 up to 2 decimal places."
-          example: 10000.00
+          example: 2000.99
         other:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2394,7 +2705,7 @@ components:
           description: Any other business income not included in turnover. Income
             associated with the running of the business. The value must be between
             0 and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
         taxTakenOffTradingIncome:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2402,7 +2713,7 @@ components:
           type: number
           description: Other tax taken off trading income apart from CIS deductions.
             The value must be between 0 and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
       additionalProperties: false
       description: Object containing the details about self-employment income.
     period_expenses_1:
@@ -2416,7 +2727,7 @@ components:
           description: The sum of all allowable expenses for the specified period.
             The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal
             places.
-          example: 10000.00
+          example: 2000.99
         costOfGoods:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2425,7 +2736,7 @@ components:
           description: Cost of goods bought for resale or goods used. Expenses associated
             with the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
         paymentsToSubcontractors:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2434,7 +2745,7 @@ components:
           description: Payments to construction industry subcontractors. Expenses
             associated with the running of the business. The value must be between
             -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.00
+          example: 2000.99
         wagesAndStaffCosts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2443,7 +2754,7 @@ components:
           description: "Wages, salaries and other staff costs. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.00
+          example: 2000.99
         carVanTravelExpenses:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2452,7 +2763,7 @@ components:
           description: "Car, van and travel expenses associated with the running of\
             \ the business. The value must be between -99999999999.99 and 99999999999.99\
             \ up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         premisesRunningCosts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2461,7 +2772,7 @@ components:
           description: "Rent, rates, power and insurance costs. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         maintenanceCosts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2470,7 +2781,7 @@ components:
           description: Repairs and renewals of property and equipment. Expenses associated
             with the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         adminCosts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2479,7 +2790,7 @@ components:
           description: "Phone, fax, stationery and other office costs. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         businessEntertainmentCosts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2488,7 +2799,7 @@ components:
           description: Business entertainment costs. Expenses associated with the
             running of the business. The value must be between -99999999999.99 and
             99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         advertisingCosts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2497,7 +2808,7 @@ components:
           description: Advertising costs. Expenses associated with the running of
             the business. The value must be between -99999999999.99 and 99999999999.99
             up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         interestOnBankOtherLoans:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2506,7 +2817,7 @@ components:
           description: Interest on bank and other loans. Expenses associated with
             the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         financeCharges:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2515,7 +2826,7 @@ components:
           description: "Bank, credit card and other financial charges. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         irrecoverableDebts:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2524,7 +2835,7 @@ components:
           description: Irrecoverable debts written off. Expenses associated with the
             running of the business. The value must be between -99999999999.99 and
             99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         professionalFees:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2533,7 +2844,7 @@ components:
           description: "Accountancy, legal and other professional fees. Expenses associated\
             \ with the running of the business. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         depreciation:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2542,7 +2853,7 @@ components:
           description: Depreciation and loss/profit on sales of assets. Expenses associated
             with the running of the business. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         otherExpenses:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2551,7 +2862,7 @@ components:
           description: Other business expenses associated with the running of the
             business. The value must be between -99999999999.99 and 99999999999.99
             up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
       additionalProperties: false
       description: Object containing the details about self-employment expenses.
     period_disallowable_expenses_1:
@@ -2565,7 +2876,7 @@ components:
           description: Cost of goods bought for resale or goods used. Any expense
             or partial expense that cannot be claimed for tax purposes. The value
             must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.45
+          example: 2000.99
         paymentsToSubcontractorsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2575,7 +2886,7 @@ components:
             Any expense or partial expense that cannot be claimed for tax purposes.
             The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal
             places.
-          example: 10000.89
+          example: 2000.99
         wagesAndStaffCostsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2584,7 +2895,7 @@ components:
           description: "Wages, salaries and other staff costs. Any expense or partial\
             \ expense that cannot be claimed for tax purposes. The value must be between\
             \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         carVanTravelExpensesDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2593,7 +2904,7 @@ components:
           description: "Car, van and travel expenses. Any expense or partial expense\
             \ that cannot be claimed for tax purposes. The value must be between -99999999999.99\
             \ and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         premisesRunningCostsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2602,7 +2913,7 @@ components:
           description: "Rent, rates, power and insurance costs. Any expense or partial\
             \ expense that cannot be claimed for tax purposes. The value must be between\
             \ -99999999999.99 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         maintenanceCostsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2611,7 +2922,7 @@ components:
           description: Repairs and renewals of property and equipment. Any expense
             or partial expense that cannot be claimed for tax purposes. The value
             must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         adminCostsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2620,7 +2931,7 @@ components:
           description: "Phone, fax, stationery and other office costs. Any expense\
             \ or partial expense that cannot be claimed for tax purposes. The value\
             \ must be between -99999999999.99 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         businessEntertainmentCostsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2629,7 +2940,7 @@ components:
           description: Business entertainment costs. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         advertisingCostsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2638,7 +2949,7 @@ components:
           description: Advertising costs. Any expense or partial expense that cannot
             be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         interestOnBankOtherLoansDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2647,7 +2958,7 @@ components:
           description: Interest on bank and other loans. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         financeChargesDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2656,7 +2967,7 @@ components:
           description: "Bank, credit card and other financial charges. Any expense\
             \ or partial expense that cannot be claimed for tax purposes. The value\
             \ must be between -99999999999.99 and 99999999999.99 up to 2 decimal places."
-          example: 10000.89
+          example: 2000.99
         irrecoverableDebtsDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2665,7 +2976,7 @@ components:
           description: Irrecoverable debts written off. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         professionalFeesDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2674,7 +2985,7 @@ components:
           description: Legal and other professional fees. Any expense or partial expense
             that cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         depreciationDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2683,7 +2994,7 @@ components:
           description: Depreciation and loss/profit on sales of assets. Any expense
             or partial expense that cannot be claimed for tax purposes. The value
             must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
         otherExpensesDisallowable:
           multipleOf: 0.01
           maximum: 99999999999.99
@@ -2692,7 +3003,7 @@ components:
           description: Other business expenses. Any expense or partial expense that
             cannot be claimed for tax purposes. The value must be between -99999999999.99
             and 99999999999.99 up to 2 decimal places.
-          example: 10000.89
+          example: 2000.99
       additionalProperties: false
       description: Object containing the details about self-employment disallowable
         expenses that cannot be claimed for tax purposes.
