@@ -145,39 +145,66 @@ paths:
                         includedNonTaxableProfits:
                           description: Income, receipts and other profits included in business income or expenses but not taxable as business profits. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         basisAdjustment:
                           description: If your basis period is not the same as your accounting period, enter the adjustment needed to arrive at the profit or loss for the basis period. If the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         overlapReliefUsed:
                           description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         accountingAdjustment:
                           description: Adjustment for change of accounting practice. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         averagingAdjustment:
                           description: Averaging adjustment (only for farmers, market gardeners and creators of literary or artistic works) – if the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         outstandingBusinessIncome:
                           description: Any other business income not included in other fields. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         balancingChargeBpra:
                           description: Balancing charge on sale or cessation of business use (only where Business Premises Renovation Allowance has been claimed). This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         balancingChargeOther:
                           description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         goodsAndServicesOwnUse:
                           description: Value of the normal sale price of goods or stock have been taken out of the business. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                     allowances:
                       type: object
                       description: Object containing the details about annual allowances
@@ -185,7 +212,10 @@ paths:
                         annualInvestmentAllowance:
                           description: Annual investment allowance on items that qualify up to the AIA amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         capitalAllowanceMainPool:
                           description: Capital allowances on equipment, including cars with lower CO2 emissions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
@@ -203,35 +233,59 @@ paths:
                         zeroEmissionsGoodsVehicleAllowance:
                           description: Zero emissions goods vehicle allowance for goods vehicles purchased for business use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         businessPremisesRenovationAllowance:
                           description: Business Premises Renovation Allowance if converting or renovating unused qualifying business premises. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         enhancedCapitalAllowance:
                           description: Other enhanced capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         allowanceOnSales:
                           description: Allowances on sale or cessation of business use (where you have disposed of assets for less than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         capitalAllowanceSingleAssetPool:
                           description: Claim to capital allowances in respect of all single asset pools. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '500.25'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         electricChargePointAllowance:
                           description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         zeroEmissionsCarAllowance:
                           description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '5000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         tradingIncomeAllowance:
                           description: The amount of trading allowance (can not be supplied with any other allowances). The value must be between 0 and 1000 up to 2 decimal places.
                           type: number
-                          example: '500.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 1000
+                          example: 100.99
                         structuredBuildingAllowance:
                           type: array
                           description: Details about structured building allowance
@@ -241,19 +295,26 @@ paths:
                               amount:
                                 description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
-                                example: '5000.99'
+                                multipleOf: 0.01
+                                minimum: 0
+                                maximum: 99999999999.99
+                                example: 2000.99
                               firstYear:
                                 type: object
                                 description: Object containing the details about structured building allowance
                                 properties:
                                   qualifyingDate:
-                                    description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
+                                    description: The date qualified for structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                     type: string
+                                    format: date
                                     example: '2020-01-01'
                                   qualifyingAmountExpenditure:
                                     description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
-                                    example: '5000.99'
+                                    multipleOf: 0.01
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    example: 2000.99
                                 required:
                                   - qualifyingDate
                                   - qualifyingAmountExpenditure
@@ -292,19 +353,26 @@ paths:
                               amount:
                                 description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
-                                example: '5000.99'
+                                multipleOf: 0.01
+                                minimum: 0
+                                maximum: 99999999999.99
+                                example: 2000.99
                               firstYear:
                                 type: object
                                 description: Object containing the details about enhanced structured building allowance
                                 properties:
                                   qualifyingDate:
-                                    description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
+                                    description: The date qualified for enhanced structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                     type: string
+                                    format: date
                                     example: '2020-01-01'
                                   qualifyingAmountExpenditure:
                                     description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
-                                    example: '5000.99'
+                                    multipleOf: 0.01
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    example: 2000.99
                                 required:
                                   - qualifyingDate
                                   - qualifyingAmountExpenditure
@@ -339,7 +407,7 @@ paths:
                         businessDetailsChangedRecently:
                           description: A boolean to identify if business details have recently changed. The value must be true or false.
                           type: boolean
-                          example: 'false'
+                          example: false
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -365,47 +433,80 @@ paths:
                         includedNonTaxableProfits:
                           description: Income, receipts and other profits included in business income or expenses but not taxable as business profits. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         basisAdjustment:
                           description: If your basis period is not the same as your accounting period, enter the adjustment needed to arrive at the profit or loss for the basis period. If the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         overlapReliefUsed:
                           description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         accountingAdjustment:
                           description: Adjustment for change of accounting practice. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         averagingAdjustment:
                           description: Averaging adjustment (only for farmers, market gardeners and creators of literary or artistic works) – if the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         outstandingBusinessIncome:
                           description: Any other business income not included in other fields. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         balancingChargeBpra:
                           description: Balancing charge on sale or cessation of business use (only where Business Premises Renovation Allowance has been claimed). This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         balancingChargeOther:
                           description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         goodsAndServicesOwnUse:
                           description: Value of the normal sale price of goods or stock have been taken out of the business. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         transitionProfitAmount:
                           description: Amount of transition profit arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         transitionProfitAccelerationAmount:
                           description: Additional amount of transition profit elected to be treated as arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                     allowances:
                       type: object
                       description: Object containing the details about annual allowances
@@ -413,7 +514,10 @@ paths:
                         annualInvestmentAllowance:
                           description: Annual investment allowance on items that qualify up to the AIA amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         capitalAllowanceMainPool:
                           description: Capital allowances on equipment, including cars with lower CO2 emissions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
@@ -431,35 +535,59 @@ paths:
                         zeroEmissionsGoodsVehicleAllowance:
                           description: Zero emissions goods vehicle allowance for goods vehicles purchased for business use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         businessPremisesRenovationAllowance:
                           description: Business Premises Renovation Allowance if converting or renovating unused qualifying business premises. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         enhancedCapitalAllowance:
                           description: Other enhanced capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         allowanceOnSales:
                           description: Allowances on sale or cessation of business use (where you have disposed of assets for less than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         capitalAllowanceSingleAssetPool:
                           description: Claim to capital allowances in respect of all single asset pools. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '500.25'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         electricChargePointAllowance:
                           description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         zeroEmissionsCarAllowance:
                           description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '5000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         tradingIncomeAllowance:
                           description: The amount of trading allowance (can not be supplied with any other allowances). The value must be between 0 and 1000 up to 2 decimal places.
                           type: number
-                          example: '500.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 1000
+                          example: 100.99
                         structuredBuildingAllowance:
                           type: array
                           description: Details about structured building allowance
@@ -469,19 +597,26 @@ paths:
                               amount:
                                 description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
-                                example: '5000.99'
+                                multipleOf: 0.01
+                                minimum: 0
+                                maximum: 99999999999.99
+                                example: 2000.99
                               firstYear:
                                 type: object
                                 description: Object containing the details about structured building allowance
                                 properties:
                                   qualifyingDate:
-                                    description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
+                                    description: The date qualified for structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                     type: string
+                                    format: date
                                     example: '2020-01-01'
                                   qualifyingAmountExpenditure:
                                     description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
-                                    example: '5000.99'
+                                    multipleOf: 0.01
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    example: 2000.99
                                 required:
                                   - qualifyingDate
                                   - qualifyingAmountExpenditure
@@ -520,19 +655,26 @@ paths:
                               amount:
                                 description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
-                                example: '5000.99'
+                                multipleOf: 0.01
+                                minimum: 0
+                                maximum: 99999999999.99
+                                example: 2000.99
                               firstYear:
                                 type: object
                                 description: Object containing the details about enhanced structured building allowance
                                 properties:
                                   qualifyingDate:
-                                    description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
+                                    description: The date qualified for enhanced structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                     type: string
+                                    format: date
                                     example: '2020-01-01'
                                   qualifyingAmountExpenditure:
                                     description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
-                                    example: '5000.99'
+                                    multipleOf: 0.01
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    example: 2000.99
                                 required:
                                   - qualifyingDate
                                   - qualifyingAmountExpenditure
@@ -567,7 +709,7 @@ paths:
                         businessDetailsChangedRecently:
                           description: A boolean to identify if business details have recently changed. The value must be true or false.
                           type: boolean
-                          example: 'false'
+                          example: false
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -593,47 +735,80 @@ paths:
                         includedNonTaxableProfits:
                           description: Income, receipts and other profits included in business income or expenses but not taxable as business profits. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         basisAdjustment:
                           description: If your basis period is not the same as your accounting period, enter the adjustment needed to arrive at the profit or loss for the basis period. If the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         overlapReliefUsed:
                           description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         accountingAdjustment:
                           description: Adjustment for change of accounting practice. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         averagingAdjustment:
                           description: Averaging adjustment (only for farmers, market gardeners and creators of literary or artistic works) – if the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         outstandingBusinessIncome:
                           description: Any other business income not included in other fields. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         balancingChargeBpra:
                           description: Balancing charge on sale or cessation of business use (only where Business Premises Renovation Allowance has been claimed). This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         balancingChargeOther:
                           description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         goodsAndServicesOwnUse:
                           description: Value of the normal sale price of goods or stock have been taken out of the business. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         transitionProfitAmount:
                           description: Amount of transition profit arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         transitionProfitAccelerationAmount:
                           description: Additional amount of transition profit elected to be treated as arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                     allowances:
                       type: object
                       description: Object containing the details about annual allowances
@@ -641,7 +816,10 @@ paths:
                         annualInvestmentAllowance:
                           description: Annual investment allowance on items that qualify up to the AIA amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '2000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         capitalAllowanceMainPool:
                           description: Capital allowances on equipment, including cars with lower CO2 emissions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
@@ -659,27 +837,45 @@ paths:
                         businessPremisesRenovationAllowance:
                           description: Business Premises Renovation Allowance if converting or renovating unused qualifying business premises. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         enhancedCapitalAllowance:
                           description: Other enhanced capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         allowanceOnSales:
                           description: Allowances on sale or cessation of business use (where you have disposed of assets for less than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '1000.45'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         capitalAllowanceSingleAssetPool:
                           description: Claim to capital allowances in respect of all single asset pools. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '500.25'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         zeroEmissionsCarAllowance:
                           description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '5000.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         tradingIncomeAllowance:
                           description: The amount of trading allowance (can not be supplied with any other allowances). The value must be between 0 and 1000 up to 2 decimal places.
                           type: number
-                          example: '500.99'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 1000
+                          example: 100.99
                         structuredBuildingAllowance:
                           type: array
                           description: Details about structured building allowance
@@ -689,19 +885,26 @@ paths:
                               amount:
                                 description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
-                                example: '5000.99'
+                                multipleOf: 0.01
+                                minimum: 0
+                                maximum: 99999999999.99
+                                example: 2000.99
                               firstYear:
                                 type: object
                                 description: Object containing the details about structured building allowance
                                 properties:
                                   qualifyingDate:
-                                    description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
+                                    description: The date qualified for structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                     type: string
+                                    format: date
                                     example: '2020-01-01'
                                   qualifyingAmountExpenditure:
                                     description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
-                                    example: '5000.99'
+                                    multipleOf: 0.01
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    example: 2000.99
                                 required:
                                   - qualifyingDate
                                   - qualifyingAmountExpenditure
@@ -740,19 +943,26 @@ paths:
                               amount:
                                 description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
-                                example: '5000.99'
+                                multipleOf: 0.01
+                                minimum: 0
+                                maximum: 99999999999.99
+                                example: 2000.99
                               firstYear:
                                 type: object
                                 description: Object containing the details about enhanced structured building allowance
                                 properties:
                                   qualifyingDate:
-                                    description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
+                                    description: The date qualified for enhanced structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                     type: string
+                                    format: date
                                     example: '2020-01-01'
                                   qualifyingAmountExpenditure:
                                     description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
-                                    example: '5000.99'
+                                    multipleOf: 0.01
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    example: 2000.99
                                 required:
                                   - qualifyingDate
                                   - qualifyingAmountExpenditure
@@ -787,7 +997,7 @@ paths:
                         businessDetailsChangedRecently:
                           description: A boolean to identify if business details have recently changed. The value must be true or false.
                           type: boolean
-                          example: 'false'
+                          example: false
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -1191,39 +1401,66 @@ paths:
                           includedNonTaxableProfits:
                             description: Income, receipts and other profits included in business income or expenses but not taxable as business profits. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           basisAdjustment:
                             description: If your basis period is not the same as your accounting period, enter the adjustment needed to arrive at the profit or loss for the basis period. If the adjustment needs to be taken off the profit figure, this should be negative. Between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: -99999999999.99
+                            maximum: 99999999999.99
+                            example: 2000.99
                           overlapReliefUsed:
                             description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           accountingAdjustment:
                             description: Adjustment for change of accounting practice. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           averagingAdjustment:
                             description: Averaging adjustment (only for farmers, market gardeners and creators of literary or artistic works) – if the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: -99999999999.99
+                            maximum: 99999999999.99
+                            example: 2000.99
                           outstandingBusinessIncome:
                             description: Any other business income not included in other fields. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           balancingChargeBpra:
                             description: Balancing charge on sale or cessation of business use (only where Business Premises Renovation Allowance has been claimed). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           balancingChargeOther:
                             description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           goodsAndServicesOwnUse:
                             description: Value of the normal sale price of goods or stock have been taken out of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                         additionalProperties: false
                       allowances:
                         type: object
@@ -1232,7 +1469,10 @@ paths:
                           annualInvestmentAllowance:
                             description: Annual investment allowance on items that qualify up to the AIA amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           capitalAllowanceMainPool:
                             description: Capital allowances on equipment, including cars with lower CO2 emissions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
@@ -1253,38 +1493,62 @@ paths:
 
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           businessPremisesRenovationAllowance:
                             description: Business Premises Renovation Allowance if converting or renovating unused qualifying business premises. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           enhancedCapitalAllowance:
                             description: |-
                               Other enhanced capital allowances.
 
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           allowanceOnSales:
                             description: Allowances on sale or cessation of business use (where you have disposed of assets for less than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           capitalAllowanceSingleAssetPool:
                             description: Claim to capital allowances in respect of all single asset pools. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           electricChargePointAllowance:
                             description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           zeroEmissionsCarAllowance:
                             description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           tradingIncomeAllowance:
                             description: The amount of trading allowance (can not be supplied with any other allowances). The value must be between 0 and 1000.00 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 1000
+                            example: 100.99
                           structuredBuildingAllowance:
                             type: array
                             description: Details about structured building allowance
@@ -1297,19 +1561,26 @@ paths:
 
                                     The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
-                                  example: '2000.99'
+                                  multipleOf: 0.01
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  example: 2000.99
                                 firstYear:
                                   type: object
                                   description: Object containing the details about structured building allowance
                                   properties:
                                     qualifyingDate:
-                                      description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
+                                      description: The date qualified for structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                       type: string
+                                      format: date
                                       example: '2020-01-01'
                                     qualifyingAmountExpenditure:
                                       description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                       type: number
-                                      example: '2000.99'
+                                      multipleOf: 0.01
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      example: 2000.99
                                   required:
                                     - qualifyingDate
                                     - qualifyingAmountExpenditure
@@ -1346,19 +1617,26 @@ paths:
                                 amount:
                                   description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
-                                  example: '5000.99'
+                                  multipleOf: 0.01
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  example: 2000.99
                                 firstYear:
                                   type: object
                                   description: Object containing the details about enhanced structured building allowance
                                   properties:
                                     qualifyingDate:
-                                      description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
+                                      description: The date qualified for enhanced structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                       type: string
+                                      format: date
                                       example: '2020-01-01'
                                     qualifyingAmountExpenditure:
                                       description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                       type: number
-                                      example: '5000.99'
+                                      multipleOf: 0.01
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      example: 2000.99
                                   required:
                                     - qualifyingDate
                                     - qualifyingAmountExpenditure
@@ -1393,7 +1671,7 @@ paths:
                           businessDetailsChangedRecently:
                             description: A boolean to identify if business details have recently changed. The value must be true or false.
                             type: boolean
-                            example: 'false'
+                            example: false
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -1407,35 +1685,6 @@ paths:
                             example: non-resident
                         required:
                           - businessDetailsChangedRecently
-                      links:
-                        type: array
-                        items:
-                          type: object
-                          description: A list of endpoint links that indicate possible actions related to the current resource.
-                          properties:
-                            href:
-                              description: The relative url of the endpoint.
-                              type: string
-                              example: /individuals/business/self-employment/AA999999A/XAIS12345678910/annual/2022-23
-                            rel:
-                              description: A label for the endpoint, which describes how it is related to the current resource. The rel will be self where the action is retrieval of the same resource.
-                              type: string
-                              enum:
-                                - self
-                                - create-and-amend-self-employment-annual-submission
-                                - delete-self-employment-annual-submission
-                            method:
-                              description: The HTTP method type for the endpoint.
-                              type: string
-                              enum:
-                                - GET
-                                - PUT
-                                - DELETE
-                          required:
-                            - href
-                            - rel
-                            - method
-                          additionalProperties: false
                     additionalProperties: false
                   - $schema: http://json-schema.org/draft-04/schema#
                     title: TY 2024-25
@@ -1449,47 +1698,80 @@ paths:
                           includedNonTaxableProfits:
                             description: Income, receipts and other profits included in business income or expenses but not taxable as business profits. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           basisAdjustment:
                             description: If your basis period is not the same as your accounting period, enter the adjustment needed to arrive at the profit or loss for the basis period. If the adjustment needs to be taken off the profit figure, this should be negative. Between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: -99999999999.99
+                            maximum: 99999999999.99
+                            example: 2000.99
                           overlapReliefUsed:
                             description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           accountingAdjustment:
                             description: Adjustment for change of accounting practice. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           averagingAdjustment:
                             description: Averaging adjustment (only for farmers, market gardeners and creators of literary or artistic works) – if the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: -99999999999.99
+                            maximum: 99999999999.99
+                            example: 2000.99
                           outstandingBusinessIncome:
                             description: Any other business income not included in other fields. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           balancingChargeBpra:
                             description: Balancing charge on sale or cessation of business use (only where Business Premises Renovation Allowance has been claimed). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           balancingChargeOther:
                             description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           goodsAndServicesOwnUse:
                             description: Value of the normal sale price of goods or stock have been taken out of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           transitionProfitAmount:
                             description: Amount of transition profit arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           transitionProfitAccelerationAmount:
                             description: Additional amount of transition profit elected to be treated as arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                         additionalProperties: false
                       allowances:
                         type: object
@@ -1498,7 +1780,10 @@ paths:
                           annualInvestmentAllowance:
                             description: Annual investment allowance on items that qualify up to the AIA amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           capitalAllowanceMainPool:
                             description: Capital allowances on equipment, including cars with lower CO2 emissions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
@@ -1519,38 +1804,62 @@ paths:
 
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           businessPremisesRenovationAllowance:
                             description: Business Premises Renovation Allowance if converting or renovating unused qualifying business premises. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           enhancedCapitalAllowance:
                             description: |-
                               Other enhanced capital allowances.
 
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           allowanceOnSales:
                             description: Allowances on sale or cessation of business use (where you have disposed of assets for less than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           capitalAllowanceSingleAssetPool:
                             description: Claim to capital allowances in respect of all single asset pools. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           electricChargePointAllowance:
                             description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           zeroEmissionsCarAllowance:
                             description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           tradingIncomeAllowance:
                             description: The amount of trading allowance (can not be supplied with any other allowances). The value must be between 0 and 1000.00 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 1000
+                            example: 100.99
                           structuredBuildingAllowance:
                             type: array
                             description: Details about structured building allowance
@@ -1563,19 +1872,26 @@ paths:
 
                                     The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
-                                  example: '2000.99'
+                                  multipleOf: 0.01
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  example: 2000.99
                                 firstYear:
                                   type: object
                                   description: Object containing the details about structured building allowance
                                   properties:
                                     qualifyingDate:
-                                      description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
+                                      description: The date qualified for structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                       type: string
+                                      format: date
                                       example: '2020-01-01'
                                     qualifyingAmountExpenditure:
                                       description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                       type: number
-                                      example: '2000.99'
+                                      multipleOf: 0.01
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      example: 2000.99
                                   required:
                                     - qualifyingDate
                                     - qualifyingAmountExpenditure
@@ -1612,19 +1928,26 @@ paths:
                                 amount:
                                   description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
-                                  example: '5000.99'
+                                  multipleOf: 0.01
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  example: 2000.99
                                 firstYear:
                                   type: object
                                   description: Object containing the details about enhanced structured building allowance
                                   properties:
                                     qualifyingDate:
-                                      description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
+                                      description: The date qualified for enhanced structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                       type: string
+                                      format: date
                                       example: '2020-01-01'
                                     qualifyingAmountExpenditure:
                                       description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                       type: number
-                                      example: '5000.99'
+                                      multipleOf: 0.01
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      example: 2000.99
                                   required:
                                     - qualifyingDate
                                     - qualifyingAmountExpenditure
@@ -1659,7 +1982,7 @@ paths:
                           businessDetailsChangedRecently:
                             description: A boolean to identify if business details have recently changed. The value must be true or false.
                             type: boolean
-                            example: 'false'
+                            example: false
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -1686,47 +2009,80 @@ paths:
                           includedNonTaxableProfits:
                             description: Income, receipts and other profits included in business income or expenses but not taxable as business profits. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           basisAdjustment:
                             description: If your basis period is not the same as your accounting period, enter the adjustment needed to arrive at the profit or loss for the basis period. If the adjustment needs to be taken off the profit figure, this should be negative. Between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: -99999999999.99
+                            maximum: 99999999999.99
+                            example: 2000.99
                           overlapReliefUsed:
                             description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           accountingAdjustment:
                             description: Adjustment for change of accounting practice. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           averagingAdjustment:
                             description: Averaging adjustment (only for farmers, market gardeners and creators of literary or artistic works) – if the adjustment needs to be taken off the profit figure, this should be negative. This value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: -99999999999.99
+                            maximum: 99999999999.99
+                            example: 2000.99
                           outstandingBusinessIncome:
                             description: Any other business income not included in other fields. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           balancingChargeBpra:
                             description: Balancing charge on sale or cessation of business use (only where Business Premises Renovation Allowance has been claimed). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           balancingChargeOther:
                             description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           goodsAndServicesOwnUse:
                             description: Value of the normal sale price of goods or stock have been taken out of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           transitionProfitAmount:
                             description: Amount of transition profit arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           transitionProfitAccelerationAmount:
                             description: Additional amount of transition profit elected to be treated as arising in this tax year for this income source. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                         additionalProperties: false
                       allowances:
                         type: object
@@ -1735,7 +2091,10 @@ paths:
                           annualInvestmentAllowance:
                             description: Annual investment allowance on items that qualify up to the AIA amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           capitalAllowanceMainPool:
                             description: Capital allowances on equipment, including cars with lower CO2 emissions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
@@ -1753,30 +2112,48 @@ paths:
                           businessPremisesRenovationAllowance:
                             description: Business Premises Renovation Allowance if converting or renovating unused qualifying business premises. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           enhancedCapitalAllowance:
                             description: |-
                               Other enhanced capital allowances.
 
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           allowanceOnSales:
                             description: Allowances on sale or cessation of business use (where you have disposed of assets for less than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           capitalAllowanceSingleAssetPool:
                             description: Claim to capital allowances in respect of all single asset pools. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           zeroEmissionsCarAllowance:
                             description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 99999999999.99
+                            example: 2000.99
                           tradingIncomeAllowance:
                             description: The amount of trading allowance (can not be supplied with any other allowances). The value must be between 0 and 1000.00 up to 2 decimal places.
                             type: number
-                            example: '2000.99'
+                            multipleOf: 0.01
+                            minimum: 0
+                            maximum: 1000
+                            example: 100.99
                           structuredBuildingAllowance:
                             type: array
                             description: Details about structured building allowance
@@ -1789,19 +2166,26 @@ paths:
 
                                     The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
-                                  example: '2000.99'
+                                  multipleOf: 0.01
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  example: 2000.99
                                 firstYear:
                                   type: object
                                   description: Object containing the details about structured building allowance
                                   properties:
                                     qualifyingDate:
-                                      description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
+                                      description: The date qualified for structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                       type: string
+                                      format: date
                                       example: '2020-01-01'
                                     qualifyingAmountExpenditure:
                                       description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                       type: number
-                                      example: '2000.99'
+                                      multipleOf: 0.01
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      example: 2000.99
                                   required:
                                     - qualifyingDate
                                     - qualifyingAmountExpenditure
@@ -1838,19 +2222,26 @@ paths:
                                 amount:
                                   description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
-                                  example: '5000.99'
+                                  multipleOf: 0.01
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  example: 2000.99
                                 firstYear:
                                   type: object
                                   description: Object containing the details about enhanced structured building allowance
                                   properties:
                                     qualifyingDate:
-                                      description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
+                                      description: The date qualified for enhanced structured building allowance. Must conform to the format `YYYY-MM-DD`.
                                       type: string
+                                      format: date
                                       example: '2020-01-01'
                                     qualifyingAmountExpenditure:
                                       description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                       type: number
-                                      example: '5000.99'
+                                      multipleOf: 0.01
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      example: 2000.99
                                   required:
                                     - qualifyingDate
                                     - qualifyingAmountExpenditure
@@ -1885,7 +2276,7 @@ paths:
                           businessDetailsChangedRecently:
                             description: A boolean to identify if business details have recently changed. The value must be true or false.
                             type: boolean
-                            example: 'false'
+                            example: false
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -2411,11 +2802,13 @@ paths:
                           id: full-date
                           description: The first day that the income, expenses and deduction period summary covers.
                           type: string
+                          format: date
                           example: '2020-01-01'
                         periodEndDate:
                           id: full-date
                           description: The last day that the income, expenses and deduction period summary covers.
                           type: string
+                          format: date
                           example: '2020-01-01'
                       additionalProperties: false
                       required: &ref_23
@@ -2429,11 +2822,17 @@ paths:
                         turnover:
                           description: The takings, fees, sales or money earned by the business. Income associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
-                          example: '10000.00'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         other:
                           type: number
                           description: Any other business income not included in turnover. Income associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.00'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                       additionalProperties: false
                     periodExpenses:
                       $schema: http://json-schema.org/draft-04/schema#
@@ -2443,67 +2842,115 @@ paths:
                         consolidatedExpenses:
                           type: number
                           description: The sum of all allowable expenses for the specified period. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.00'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         costOfGoods:
                           type: number
                           description: Cost of goods bought for resale or goods used. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.00'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         paymentsToSubcontractors:
                           type: number
                           description: Payments to construction industry subcontractors. Expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.00'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         wagesAndStaffCosts:
                           type: number
                           description: Wages, salaries and other staff costs. Expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.00'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         carVanTravelExpenses:
                           type: number
                           description: Car, van and travel expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         premisesRunningCosts:
                           type: number
                           description: Rent, rates, power and insurance costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         maintenanceCosts:
                           type: number
                           description: Repairs and renewals of property and equipment. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         adminCosts:
                           type: number
                           description: Phone, fax, stationery and other office costs. Expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         businessEntertainmentCosts:
                           type: number
                           description: Business entertainment costs. Expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         advertisingCosts:
                           type: number
                           description: Advertising costs. Expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         interestOnBankOtherLoans:
                           type: number
                           description: Interest on bank and other loans. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         financeCharges:
                           type: number
                           description: Bank, credit card and other financial charges. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         irrecoverableDebts:
                           type: number
                           description: Irrecoverable debts written off. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         professionalFees:
                           type: number
                           description: Accountancy, legal and other professional fees. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         depreciation:
                           type: number
                           description: Depreciation and loss/profit on sales of assets. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         otherExpenses:
                           type: number
                           description: Other business expenses associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                       additionalProperties: false
                     periodDisallowableExpenses:
                       $schema: http://json-schema.org/draft-04/schema#
@@ -2513,63 +2960,108 @@ paths:
                         costOfGoodsDisallowable:
                           type: number
                           description: Cost of goods bought for resale or goods used. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.45'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         paymentsToSubcontractorsDisallowable:
                           type: number
                           description: Payments to subcontractors - Construction Industry Scheme (CIS). Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         wagesAndStaffCostsDisallowable:
                           type: number
                           description: Wages, salaries and other staff costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         carVanTravelExpensesDisallowable:
                           type: number
                           description: Car, van and travel expenses. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         premisesRunningCostsDisallowable:
                           type: number
                           description: Rent, rates, power and insurance costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         maintenanceCostsDisallowable:
                           type: number
                           description: Repairs and renewals of property and equipment. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         adminCostsDisallowable:
                           type: number
                           description: Phone, fax, stationery and other office costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         businessEntertainmentCostsDisallowable:
                           type: number
                           description: Business entertainment costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         advertisingCostsDisallowable:
                           type: number
                           description: Advertising costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         interestOnBankOtherLoansDisallowable:
                           type: number
                           description: Interest on bank and other loans. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         financeChargesDisallowable:
                           type: number
                           description: Bank, credit card and other financial charges. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         irrecoverableDebtsDisallowable:
                           type: number
                           description: Irrecoverable debts written off. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         professionalFeesDisallowable:
                           type: number
                           description: Legal and other professional fees. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                         depreciationDisallowable:
                           type: number
                           description: Depreciation and loss/profit on sales of assets. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: -99999999999.99
+                          maximum: 99999999999.99
+                          example: 2000.99
                         otherExpensesDisallowable:
                           type: number
                           description: Other business expenses. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                          example: '10000.89'
+                          multipleOf: 0.01
+                          minimum: 0
+                          maximum: 99999999999.99
+                          example: 2000.99
                       additionalProperties: false
                   additionalProperties: false
                   required:
@@ -2597,21 +3089,21 @@ paths:
                           multipleOf: 0.01
                           minimum: 0
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                         other:
                           type: number
                           description: Any other business income not included in turnover. Income associated with the running of the business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: 0
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                         taxTakenOffTradingIncome:
                           type: number
                           description: Other tax taken off trading income apart from CIS deductions. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: 0
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                       additionalProperties: false
                     periodExpenses:
                       $schema: http://json-schema.org/draft-04/schema#
@@ -2624,112 +3116,112 @@ paths:
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                         costOfGoods:
                           type: number
                           description: Cost of goods bought for resale or goods used. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                         paymentsToSubcontractors:
                           type: number
                           description: Payments to construction industry subcontractors. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                         wagesAndStaffCosts:
                           type: number
                           description: Wages, salaries and other staff costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.00'
+                          example: 2000.99
                         carVanTravelExpenses:
                           type: number
                           description: Car, van and travel expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         premisesRunningCosts:
                           type: number
                           description: Rent, rates, power and insurance costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         maintenanceCosts:
                           type: number
                           description: Repairs and renewals of property and equipment. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         adminCosts:
                           type: number
                           description: Phone, fax, stationery and other office costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         businessEntertainmentCosts:
                           type: number
                           description: Business entertainment costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         advertisingCosts:
                           type: number
                           description: Advertising costs. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         interestOnBankOtherLoans:
                           type: number
                           description: Interest on bank and other loans. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         financeCharges:
                           type: number
                           description: Bank, credit card and other financial charges. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         irrecoverableDebts:
                           type: number
                           description: Irrecoverable debts written off. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         professionalFees:
                           type: number
                           description: Accountancy, legal and other professional fees. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         depreciation:
                           type: number
                           description: Depreciation and loss/profit on sales of assets. Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         otherExpenses:
                           type: number
                           description: Other business expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                       additionalProperties: false
                     periodDisallowableExpenses:
                       $schema: http://json-schema.org/draft-04/schema#
@@ -2742,105 +3234,105 @@ paths:
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.45'
+                          example: 2000.99
                         paymentsToSubcontractorsDisallowable:
                           type: number
                           description: Payments to subcontractors - Construction Industry Scheme (CIS). Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         wagesAndStaffCostsDisallowable:
                           type: number
                           description: Wages, salaries and other staff costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         carVanTravelExpensesDisallowable:
                           type: number
                           description: Car, van and travel expenses. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         premisesRunningCostsDisallowable:
                           type: number
                           description: Rent, rates, power and insurance costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         maintenanceCostsDisallowable:
                           type: number
                           description: Repairs and renewals of property and equipment. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         adminCostsDisallowable:
                           type: number
                           description: Phone, fax, stationery and other office costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         businessEntertainmentCostsDisallowable:
                           type: number
                           description: Business entertainment costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         advertisingCostsDisallowable:
                           type: number
                           description: Advertising costs. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         interestOnBankOtherLoansDisallowable:
                           type: number
                           description: Interest on bank and other loans. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         financeChargesDisallowable:
                           type: number
                           description: Bank, credit card and other financial charges. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         irrecoverableDebtsDisallowable:
                           type: number
                           description: Irrecoverable debts written off. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         professionalFeesDisallowable:
                           type: number
                           description: Legal and other professional fees. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         depreciationDisallowable:
                           type: number
                           description: Depreciation and loss/profit on sales of assets. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                         otherExpensesDisallowable:
                           type: number
                           description: Other business expenses. Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                           multipleOf: 0.01
                           minimum: -99999999999.99
                           maximum: 99999999999.99
-                          example: '10000.89'
+                          example: 2000.99
                       additionalProperties: false
                   additionalProperties: false
                   required:
@@ -3222,12 +3714,14 @@ paths:
                           type: string
                           example: 2017-04-06_2017-07-04
                         periodStartDate:
-                          description: 'The first day that the income, expenses and deduction period summary covers. Must conform to the format: YYYY-MM-DD'
+                          description: 'The first day that the income, expenses and deduction period summary covers. Must conform to the format: `YYYY-MM-DD`'
                           type: string
+                          format: date
                           example: '2020-01-01'
                         periodEndDate:
-                          description: 'The last day that the income, expenses and deduction period summary covers. Must conform to the format: YYYY-MM-DD'
+                          description: 'The last day that the income, expenses and deduction period summary covers. Must conform to the format: `YYYY-MM-DD`'
                           type: string
+                          format: date
                           example: '2020-01-01'
                       required:
                         - periodId
@@ -4180,20 +4674,20 @@ paths:
                   properties:
                     periodStartDate:
                       description: |-
-                        The first day that the income, expenses and deduction summary covers. Must conform to the format: YYYY-MM-DD.
+                        The first day that the income, expenses and deduction summary covers. Must conform to the format: `YYYY-MM-DD`.
 
                         For users with ITSA status of 'annual' or a latent income source, these dates are not required.
                       type: string
-                      example: '2025-04-06'
                       format: date
+                      example: '2025-04-06'
                     periodEndDate:
                       description: |-
-                        The last day that the income, expenses and deduction summary covers. Must conform to the format: YYYY-MM-DD.
+                        The last day that the income, expenses and deduction summary covers. Must conform to the format: `YYYY-MM-DD`.
 
                         For users with ITSA status of 'annual' or a latent income source, these dates are not required.
                       type: string
-                      example: '2025-07-05'
                       format: date
+                      example: '2025-07-05'
                   required:
                     - periodStartDate
                     - periodEndDate
@@ -4808,15 +5302,15 @@ paths:
                     description: Object containing the details about self-employment period dates.
                     properties:
                       periodStartDate:
-                        description: 'The first day that the income, expenses and deduction period summary covers. Must conform to the format: YYYY-MM-DD'
+                        description: 'The first day that the income, expenses and deduction period summary covers. Must conform to the format: `YYYY-MM-DD`'
                         type: string
+                        format: date
                         example: '2025-04-06'
-                        format: date
                       periodEndDate:
-                        description: 'The last day that the income, expenses and deduction period summary covers. Must conform to the format: YYYY-MM-DD'
+                        description: 'The last day that the income, expenses and deduction period summary covers. Must conform to the format: `YYYY-MM-DD`'
                         type: string
-                        example: '2025-07-05'
                         format: date
+                        example: '2025-07-05'
                     additionalProperties: false
                     required:
                       - periodStartDate
