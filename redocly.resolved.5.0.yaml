@@ -446,12 +446,13 @@ paths:
                           maximum: 99999999999.99
                           example: 2000.99
                         overlapReliefUsed:
-                          description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places. This field is deprecated and will be removed in a future release.
                           type: number
                           multipleOf: 0.01
                           minimum: 0
                           maximum: 99999999999.99
                           example: 2000.99
+                          deprecated: true
                         accountingAdjustment:
                           description: Adjustment for change of accounting practice. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
@@ -726,7 +727,7 @@ paths:
                       required:
                         - businessDetailsChangedRecently
                 - $schema: http://json-schema.org/draft-04/schema#
-                  title: TY 2025-26 or later
+                  title: TY 2025-26
                   description: Create and Amend Self-Employment Annual Submission Request
                   type: object
                   properties:
@@ -749,12 +750,13 @@ paths:
                           maximum: 99999999999.99
                           example: 2000.99
                         overlapReliefUsed:
-                          description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          description: Overlap relief used this year. This value must be between 0 and 99999999999.99 up to 2 decimal places. This field is deprecated and will be removed in a future release.
                           type: number
                           multipleOf: 0.01
                           minimum: 0
                           maximum: 99999999999.99
                           example: 2000.99
+                          deprecated: true
                         accountingAdjustment:
                           description: Adjustment for change of accounting practice. This value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
@@ -1027,10 +1029,10 @@ paths:
               Without trading allowance request for TY 2024-25:
                 value:
                   $ref: ./examples/createAmendAnnualSubmission/def2/without_trading_income_allowance.json
-              With trading allowance request for TY 2025-26 onwards:
+              With trading allowance request for TY 2025-26:
                 value:
                   $ref: ./examples/createAmendAnnualSubmission/def3/with_trading_income_allowance.json
-              Without trading allowance request for TY 2025-26 onwards:
+              Without trading allowance request for TY 2025-26:
                 value:
                   $ref: ./examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json
       responses:
@@ -1204,6 +1206,11 @@ paths:
                   value: &ref_20
                     code: RULE_OUTSIDE_AMENDMENT_WINDOW
                     message: You are outside the amendment window
+                RULE_OVERLAP_RELIEF_USED_NOT_ALLOWED:
+                  description: The final tax year for the utilisation of overlap relief was 2023–24 as part of the basis period reform. Therefore, the overlapReliefUsed field is not applicable for tax years 2024–25 and later.
+                  value:
+                    code: RULE_OVERLAP_RELIEF_USED_NOT_ALLOWED
+                    message: The overlapReliefUsed field is not applicable for this tax year
         '403':
           description: Forbidden
           headers:
@@ -1714,12 +1721,13 @@ paths:
                             maximum: 99999999999.99
                             example: 2000.99
                           overlapReliefUsed:
-                            description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                            description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places. This field is deprecated and will be removed in a future release.
                             type: number
                             multipleOf: 0.01
                             minimum: 0
                             maximum: 99999999999.99
                             example: 2000.99
+                            deprecated: true
                           accountingAdjustment:
                             description: Adjustment for change of accounting practice. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
@@ -2003,7 +2011,7 @@ paths:
                           - businessDetailsChangedRecently
                     additionalProperties: false
                   - $schema: http://json-schema.org/draft-04/schema#
-                    title: TY 2025-26 or later
+                    title: TY 2025-26
                     description: Retrieves a self-employment annual summary for a tax year.
                     type: object
                     properties:
@@ -2026,12 +2034,13 @@ paths:
                             maximum: 99999999999.99
                             example: 2000.99
                           overlapReliefUsed:
-                            description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                            description: Overlap relief used this year. The value must be between 0 and 99999999999.99 up to 2 decimal places. This field is deprecated and will be removed in a future release.
                             type: number
                             multipleOf: 0.01
                             minimum: 0
                             maximum: 99999999999.99
                             example: 2000.99
+                            deprecated: true
                           accountingAdjustment:
                             description: Adjustment for change of accounting practice. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                             type: number
@@ -2310,10 +2319,10 @@ paths:
                 With trading allowances response for TY 2024-25:
                   value:
                     $ref: ./examples/retrieveAnnualSubmission/def2/trading_allowance_response.json
-                With allowances response for TY 2025-26 onwards:
+                With allowances response for TY 2025-26:
                   value:
                     $ref: ./examples/retrieveAnnualSubmission/def3/full_response.json
-                With trading allowances response for TY 2025-26 onwards:
+                With trading allowances response for TY 2025-26:
                   value:
                     $ref: ./examples/retrieveAnnualSubmission/def3/trading_allowance_response.json
         '400':
