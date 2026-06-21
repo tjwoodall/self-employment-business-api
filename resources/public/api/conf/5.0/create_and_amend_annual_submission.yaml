@@ -40,6 +40,8 @@ requestBody:
           - $ref: './schemas/createAmendAnnualSubmission/def2/request.json'
           - $ref: './schemas/createAmendAnnualSubmission/def3/request.json'
           
+          - $ref: './schemas/createAmendAnnualSubmission/def4/request.json'
+          
       examples:
         "With trading allowance request for TY 2023-24 and before":
           value:
@@ -59,6 +61,13 @@ requestBody:
         "Without trading allowance request for TY 2025-26":
           value:
             $ref: './examples/createAmendAnnualSubmission/def3/without_trading_income_allowance.json'
+        
+        "With trading allowance request for TY 2026-27 onwards":
+          value:
+            $ref: './examples/createAmendAnnualSubmission/def4/with_trading_income_allowance.json'
+        "Without trading allowance request for TY 2026-27 onwards":
+          value:
+            $ref: './examples/createAmendAnnualSubmission/def4/without_trading_income_allowance.json'
         
 
 responses:
