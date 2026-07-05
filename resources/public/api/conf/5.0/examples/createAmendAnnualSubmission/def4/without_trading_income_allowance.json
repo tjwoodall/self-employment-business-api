@@ -20,6 +20,7 @@
     "allowanceOnSales": 200.12,
     "capitalAllowanceSingleAssetPool": 200.12,
     "zeroEmissionsCarAllowance": 200.12,
+    
     "structuredBuildingAllowance": [
       {
         "amount": 1.23,
