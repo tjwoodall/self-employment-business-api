@@ -406,9 +406,10 @@ paths:
                       description: Object containing details about annual non financials
                       properties:
                         businessDetailsChangedRecently:
-                          description: A boolean to identify if business details have recently changed. The value must be true or false.
+                          description: A boolean to identify if business details have recently changed. The value must be true or false. This field is deprecated and will be removed in a future release and should no longer be provided in requests.
                           type: boolean
                           example: false
+                          deprecated: true
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -420,8 +421,6 @@ paths:
                             - over-state-pension-age
                             - under-16
                           example: non-resident
-                      required:
-                        - businessDetailsChangedRecently
                 - $schema: http://json-schema.org/draft-04/schema#
                   title: TY 2024-25
                   description: Create and Amend Self-Employment Annual Submission Request
@@ -710,9 +709,10 @@ paths:
                       description: Object containing details about annual non financials
                       properties:
                         businessDetailsChangedRecently:
-                          description: A boolean to identify if business details have recently changed. The value must be true or false.
+                          description: A boolean to identify if business details have recently changed. The value must be true or false. This field is deprecated and will be removed in a future release and should no longer be provided in requests.
                           type: boolean
                           example: false
+                          deprecated: true
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -724,8 +724,6 @@ paths:
                             - over-state-pension-age
                             - under-16
                           example: non-resident
-                      required:
-                        - businessDetailsChangedRecently
                 - $schema: http://json-schema.org/draft-04/schema#
                   title: TY 2025-26
                   description: Create and Amend Self-Employment Annual Submission Request
@@ -1000,9 +998,10 @@ paths:
                       description: Object containing details about annual non financials
                       properties:
                         businessDetailsChangedRecently:
-                          description: A boolean to identify if business details have recently changed. The value must be true or false.
+                          description: A boolean to identify if business details have recently changed. The value must be true or false. This field is deprecated and will be removed in a future release and should no longer be provided in requests.
                           type: boolean
                           example: false
+                          deprecated: true
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -1014,8 +1013,6 @@ paths:
                             - over-state-pension-age
                             - under-16
                           example: non-resident
-                      required:
-                        - businessDetailsChangedRecently
                 - $schema: http://json-schema.org/draft-04/schema#
                   title: '[Test only] TY 2026-27 onwards'
                   description: Create and Amend Self-Employment Annual Submission Request
@@ -1288,10 +1285,6 @@ paths:
                       type: object
                       description: Object containing details about annual non financials
                       properties:
-                        businessDetailsChangedRecently:
-                          description: A boolean to identify if business details have recently changed. The value must be true or false.
-                          type: boolean
-                          example: false
                         class4NicsExemptionReason:
                           description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                           type: string
@@ -1303,8 +1296,6 @@ paths:
                             - over-state-pension-age
                             - under-16
                           example: non-resident
-                      required:
-                        - businessDetailsChangedRecently
             examples:
               With trading allowance request for TY 2023-24 and before:
                 value:
@@ -1975,9 +1966,10 @@ paths:
                         description: Object containing details about annual non financials
                         properties:
                           businessDetailsChangedRecently:
-                            description: A boolean to identify if business details have recently changed. The value must be true or false.
+                            description: A boolean to identify if business details have recently changed. The value must be true or false. This field is deprecated and will be removed in a future release. If not present, the value defaults to false.
                             type: boolean
                             example: false
+                            deprecated: true
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -2288,9 +2280,10 @@ paths:
                         description: Object containing details about annual non financials
                         properties:
                           businessDetailsChangedRecently:
-                            description: A boolean to identify if business details have recently changed. The value must be true or false.
+                            description: A boolean to identify if business details have recently changed. The value must be true or false. This field is deprecated and will be removed in a future release. If not present, the value defaults to false.
                             type: boolean
                             example: false
+                            deprecated: true
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -2584,9 +2577,10 @@ paths:
                         description: Object containing details about annual non financials
                         properties:
                           businessDetailsChangedRecently:
-                            description: A boolean to identify if business details have recently changed. The value must be true or false.
+                            description: A boolean to identify if business details have recently changed. The value must be true or false. This field is deprecated and will be removed in a future release. If not present, the value defaults to false.
                             type: boolean
                             example: false
+                            deprecated: true
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -2878,10 +2872,6 @@ paths:
                         type: object
                         description: Object containing details about annual non financials
                         properties:
-                          businessDetailsChangedRecently:
-                            description: A boolean to identify if business details have recently changed. The value must be true or false.
-                            type: boolean
-                            example: false
                           class4NicsExemptionReason:
                             description: If exempt from paying Class 4 National Insurance, the reason for exemption.
                             type: string
@@ -2893,8 +2883,6 @@ paths:
                               - over-state-pension-age
                               - under-16
                             example: non-resident
-                        required:
-                          - businessDetailsChangedRecently
                     additionalProperties: false
               examples:
                 With allowances response for TY 2023-24 and before:
