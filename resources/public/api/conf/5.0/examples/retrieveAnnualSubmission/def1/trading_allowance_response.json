@@ -13,7 +13,7 @@
     "tradingIncomeAllowance": 572.99
   },
   "nonFinancials": {
-    "businessDetailsChangedRecently": true,
+    "businessDetailsChangedRecently": false,
     "class4NicsExemptionReason": "non-resident"
   }
 }
