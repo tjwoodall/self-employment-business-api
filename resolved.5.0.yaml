@@ -150,7 +150,7 @@ paths:
         content:
           application/json:
             schema:
-              oneOf:
+              anyOf:
               - title: Before TY 2023-24
                 required:
                 - periodDates
