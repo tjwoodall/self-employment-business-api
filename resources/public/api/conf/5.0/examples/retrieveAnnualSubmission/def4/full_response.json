@@ -21,6 +21,8 @@
     "capitalAllowanceSingleAssetPool": 563.89,
     "zeroEmissionsCarAllowance": 678.78,
     
+      "firstYearAllowanceOnPlantAndMachinery": 678.78,
+    
     "structuredBuildingAllowance": [
       {
         "amount": 564.89,
