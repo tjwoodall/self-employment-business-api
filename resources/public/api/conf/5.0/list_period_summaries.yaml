@@ -50,8 +50,7 @@ get:
             $ref: './schemas/listPeriodSummaries/response.json'
           examples:
             "Example response":
-              value:
-                $ref: './examples/listPeriodSummaries/response.json'
+              externalValue: './examples/listPeriodSummaries/response.json'
 
     "400":
       description: Bad request
